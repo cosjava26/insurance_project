@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>保單計劃比較頁</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="stylesheet" href="stylesheets/bootstrap.css">
+  <link rel="shortcut icon" href="favicon.ico" /> 
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="index.html" class="navbar-brand">
+            <img src="images/logo.png" alt="">
+          </a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="##" id="cd-tour-trigger"><i class="fa fa-lightbulb-o fa-lg glyphicon-user"></i>新手教學</a></li>
+            <!-- <li><a href="##"><i class="fa fa-child fa-lg"></i>人身險</a></li> -->
+            <!-- <li><a href="##"><i class="fa fa-car"></i>車險</a></li> -->
+            <li><a href="##"><span class="glyphicon glyphicon-user"></span>我要登入/註冊</a></li>
+          </ul>
+          <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="輸入金額或關鍵字">
+              <button type="submit" class="btn btn-primary">
+                <span class="glyphicon glyphicon-search"></span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="content_area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <ol class="breadcrumb">
+              <li><a href="#"><span>首頁</span></a></li>
+              <li><a href="#"><span>保單搭配試算</span></a></li>
+              <li class="active"><a href="#"><span>保單詳細內容</span></a></li>
+            </ol>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 clearfix">
+            <h1 class="list_title">n歲的保險試算比較</h1>
+            <a href="##" class="modify-link" data-toggle="modal" data-target="#edit-age"><i class="fa fa-pencil"></i>試算條件修改</a>
+            <div class="age-modify">
+              <p>出生年/民國78年(26歲)</p>
+              <p>性別/女</p>
+            </div>
+            <span class="modify-word">試算條件</span>
+          </div>
+        </div>
+      </div>
+      <div class="bg-gray">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <a href="javascript:void(0)" class="btn-text" id="back_simulator">
+                <i class="fa fa-arrow-left"></i>重新比較
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-12">
+              <div class="my_plan table-responsive">
+                <ol class="table">
+                  <li>
+                    <span class="atr_gray">保險公司</span>
+                    <span>
+                      <div class="company-name">
+                        富邦人壽
+                      </div>
+                    </span>
+                    <span>
+                      <div class="company-name">
+                        新光人壽
+                      </div>
+                    </span>
+                    <span>
+                      <div class="company-name">
+                        三商美邦人壽
+                      </div>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="atr_gray">保單項目</span>
+                    <span>
+                      <div class="pd_name">
+                        幸福人生終身壽險<span class="time_pay">20期</span>
+                      </div>
+                      <div class="pd_name">
+                        安心保意外傷害保險附約<span class="time_pay">1期</span>
+                      </div>
+                      <div class="pd_name">
+                        一年定期心安殘廢保險附約<span class="time_pay">1期</span>
+                      </div>
+                    </span>
+                    <span>
+                      <div class="pd_name">
+                        幸福人生終身壽險<span class="time_pay">20期</span>
+                      </div>
+                      <div class="pd_name">
+                        安心保意外傷害保險附約<span class="time_pay">1期</span>
+                      </div>
+                      <div class="pd_name">
+                        一年定期心安殘廢保險附約<span class="time_pay">1期</span>
+                      </div>
+                    </span>
+                    <span>
+                      <div class="pd_name">
+                        幸福人生終身壽險<span class="time_pay">20期</span>
+                      </div>
+                      <div class="pd_name">
+                        安心保意外傷害保險附約<span class="time_pay">1期</span>
+                      </div>
+                      <div class="pd_name">
+                        一年定期心安殘廢保險附約<span class="time_pay">1期</span>
+                      </div>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="atr_red">年繳保費合計</span>
+                    <span>
+                      <div class="plan_total">
+                        <div class="plan_money">
+                          $7,500
+                          <span class="unit">元/年</span>
+                        </div>
+                        <a href="##" data-toggle="modal" data-target="#request" class="request-link">找業務員提需求</a>
+                      </div>
+                    </span>
+                    <span>
+                      <div class="plan_total">
+                        <div class="plan_money">
+                          $3,500
+                          <span class="unit">元/年</span>
+                        </div>
+                        <a href="##" data-toggle="modal" data-target="#request" class="request-link">找業務員提需求</a>
+                      </div>
+                    </span>
+                    <span>
+                      <div class="plan_total">
+                        <div class="plan_money">
+                          $2,500
+                          <span class="unit">元/年</span>
+                        </div>
+                        <a href="##" data-toggle="modal" data-target="#request" class="request-link">找業務員提需求</a>
+                      </div>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="atr_gray">調整保費</span>
+                    <span>
+                      <div class="plan_total">
+                        <a href="#" class="btn btn-danger btn-adjest" data-toggle="modal" data-target="#adjest_money">調整保費</a>
+                      </div>
+                    </span>
+                    <span>
+                      <div class="plan_total">
+                        <a href="#" class="btn btn-danger btn-adjest" data-toggle="modal" data-target="#adjest_money">調整保費</a>
+                      </div>
+                    </span>
+                    <span>
+                      <div class="plan_total">
+                        <a href="#" class="btn btn-danger btn-adjest" data-toggle="modal" data-target="#adjest_money">調整保費</a>
+                      </div>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="atr_gray">壽險身故金</span>
+                    <span>
+                      <div class="label_kind">
+                        200萬元
+                      </div>
+                    </span>
+                    <span>
+                      <div class="label_kind">
+                        200萬元
+                      </div>
+                    </span>
+                    <span>
+                      <div class="label_kind">
+                        200萬元
+                      </div>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="atr_gray">意外身故金</span>
+                    <span>
+                      <div class="label_kind">
+                        100,000元
+                      </div>
+                    </span>
+                    <span>
+                      <div class="label_kind">
+                        200,000元
+                      </div>
+                    </span>
+                    <span>
+                      <div class="label_kind">
+                        300,000元
+                      </div>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="atr_gray">祝壽保險金</span>
+                    <span>
+                      <div class="label_kind">
+                        有
+                      </div>
+                    </span>
+                    <span>
+                      <div class="label_kind">
+                        無
+                      </div>
+                    </span>
+                    <span>
+                      <div class="label_kind">
+                        有
+                      </div>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="atr_gray">非全殘理賠</span>
+                    <span>
+                      <div class="label_kind">
+                        有
+                      </div>
+                    </span>
+                    <span>
+                      <div class="label_kind">
+                        有
+                      </div>
+                    </span>
+                    <span>
+                      <div class="label_kind">
+                        無
+                      </div>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="atr_gray">住院日額</span>
+                    <span>
+                      <div class="label_kind">
+                        2000元/日
+                      </div>
+                    </span>
+                    <span>
+                      <div class="label_kind">
+                        3000元/日
+                      </div>
+                    </span>
+                    <span>
+                      <div class="label_kind">
+                        2000元/日
+                      </div>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="atr_gray">雜費理賠</span>
+                    <span>
+                      <div class="label_kind">
+                        30,000元
+                      </div>
+                    </span>
+                    <span>
+                      <div class="label_kind">
+                        40,000元
+                      </div>
+                    </span>
+                    <span>
+                      <div class="label_kind">
+                        30,000元
+                      </div>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="atr_gray">重疾首次金</span>
+                    <span>
+                      <div class="label_kind">
+                        200,000元
+                      </div>
+                    </span>
+                    <span>
+                      <div class="label_kind">
+                        200,000元
+                      </div>
+                    </span>
+                    <span>
+                      <div class="label_kind">
+                        200,000元
+                      </div>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="atr_gray">重大傷病卡認定</span>
+                    <span>
+                      <div class="label_kind">
+                        有
+                      </div>
+                    </span>
+                    <span>
+                      <div class="label_kind">
+                        無
+                      </div>
+                    </span>
+                    <span>
+                      <div class="label_kind">
+                        無
+                      </div>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="atr_gray">重疾豁免</span>
+                    <span>
+                      <div class="label_kind">
+                        有
+                      </div>
+                    </span>
+                    <span>
+                      <div class="label_kind">
+                        無
+                      </div>
+                    </span>
+                    <span>
+                      <div class="label_kind">
+                        有
+                      </div>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="atr_gray">初次罹癌金</span>
+                    <span>
+                      <div class="label_kind">
+                        100,000元
+                      </div>
+                    </span>
+                    <span>
+                      <div class="label_kind">
+                        100,000元
+                      </div>
+                    </span>
+                    <span>
+                      <div class="label_kind">
+                        100,000元
+                      </div>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="atr_gray">原位癌保險金</span>
+                    <span>
+                      <div class="label_kind">
+                        --
+                      </div>
+                    </span>
+                    <span>
+                      <div class="label_kind">
+                        45,000元
+                      </div>
+                    </span>
+                    <span>
+                      <div class="label_kind">
+                        45,000元
+                      </div>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="atr_gray">全殘保險金</span>
+                    <span>
+                      <div class="label_kind">
+                        100,000元
+                      </div>
+                    </span>
+                    <span>
+                      <div class="label_kind">
+                        200,000元
+                      </div>
+                    </span>
+                    <span>
+                      <div class="label_kind">
+                        150,000元
+                      </div>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="atr_gray">看護首次金</span>
+                    <span>
+                      <div class="label_kind">
+                        1,200,000元
+                      </div>
+                    </span>
+                    <span>
+                      <div class="label_kind">
+                        1,200,000元
+                      </div>
+                    </span>
+                    <span>
+                      <div class="label_kind">
+                        1,200,000元
+                      </div>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="atr_gray">看護保險金</span>
+                    <span>
+                      <div class="label_kind">
+                        --
+                      </div>
+                    </span>
+                    <span>
+                      <div class="label_kind">
+                        --
+                      </div>
+                    </span>
+                    <span>
+                      <div class="label_kind">
+                        --
+                      </div>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="atr_gray">特定重疾金</span>
+                    <span>
+                      <div class="label_kind">
+                        --
+                      </div>
+                    </span>
+                    <span>
+                      <div class="label_kind">
+                        --
+                      </div>
+                    </span>
+                    <span>
+                      <div class="label_kind">
+                        --
+                      </div>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="atr_gray">特定傷病一次給付</span>
+                    <span>
+                      <div class="label_kind">
+                        300,000元
+                      </div>
+                    </span>
+                    <span>
+                      <div class="label_kind">
+                        300,000元
+                      </div>
+                    </span>
+                    <span>
+                      <div class="label_kind">
+                        300,000元
+                      </div>
+                    </span>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="copyright copyright_w">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6">
+              <p>保單查詢功能需提供年齡與性別才能提供符合條件的保險資訊，保險規劃功能僅提供會員使用。<br>
+              無論您是否登入會員，在使用本網站時，您都受到EZprice比價網<a href="http://ezprice.com.tw/privacy_policy.php" target="_blank">會員及隱私權條款</a>保護。<br>
+              保單名稱或相關條件之正確資訊應以各家保險公司官網之公告或最新文宣為主，本網站並非保險仲介或交易平台，保險標的之詳情應請洽各保險公司之保險從業人員。<br>
+              </p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 footer-right">
+              <a href="##">聯絡我們</a>
+              <a href="##">意見回饋</a>
+              <a href="##">會員及隱私條款</a><br>
+              © 2015 EZprice Co., Ltd. All rights reserved.<br>
+              常年法律顧問: 明沂法律事務所
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- edit-age-modal -->
+    <div class="modal fade" id="edit-age" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header edit-age-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">輸入試算的出生年月日及性別</h4>
+          </div>
+          <div class="modal-body edit-age-body">
+            <div class="row">
+              <div class="col-sm-12 col-md-12 clearfix">
+                <div class="age">
+                  <span>出生年</span>
+                  <select class="form-control year-select" id="select">
+                    <option>民國年</option>
+                    <option>77年(27歲)</option>
+                    <option>78年(26歲)</option>
+                    <option>79年(25歲)</option>
+                    <option>80年(24歲)</option>
+                    <option>81年(23歲)</option>
+                    <option>82年(22歲)</option>
+                    <option>83年(21歲)</option>
+                    <option>84年(20歲)</option>
+                  </select>
+                  <select class="form-control month-select" id="select">
+                    <option>月份</option>
+                    <option>1月</option>
+                    <option>2月</option>
+                    <option>3月</option>
+                    <option>4月</option>
+                  </select>
+                  <span>月</span>
+                </div>
+                <div class="modal-gender">
+                  <span>性別</span>
+                  <input type="radio" class="radio" name="sex" value="0" id="men">
+                  <label for="men"><span>男性</span></label>
+                  <input type="radio" class="radio" name="sex" value="1" id="women">
+                  <label for="women"><span>女性</span></label>
+                </div>
+              </div>
+            </div>         
+          </div>
+          <div class="modal-footer edit-age-footer">
+            <button type="button" class="btn btn-primary btn-edit-age">確定</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 調整保單細節彈窗 -->
+    <div class="modal" id="adjest_money">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header clearfix">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title modal-title-adjest">陳小妹的保單</h4>
+            <span class="pull-right modal-total-money">總保費合計：7,500/年</span>
+          </div>
+          <div class="modal-body modal-body-adjest_money">
+            <div class="row">
+              <div class="col-md-12">
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#main_plan" data-toggle="tab" aria-expanded="true">主約</a></li>
+                  <li class=""><a href="#attach_plan" data-toggle="tab" aria-expanded="false">附約</a></li>
+                </ul>
+                <div id="myTabContent" class="tab-content tab-content-adjest">
+                  <div class="tab-pane fade active in" id="main_plan">
+                    <div class="row">
+                      <div class="col-xs-12 col-md-4">
+                        <div class="list-group">
+                          <div class="list-group-item">
+                            <h4 class="list-group-item-heading company_name">
+                              國泰人壽保險股份有限公司
+                            </h4>
+                            <span class="label label-primary">壽險</span>
+                            <span class="label label-warning">級距一</span>
+                            <p class="list-group-item-text">國泰人壽商品名稱國泰人壽商品名稱國泰人壽商品名稱國泰人壽商品名稱</p>
+                            <div class="price clearfix">
+                              <span class="main_plan_price">保費小計：$12,000</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xs-12 col-md-8">
+                        <div class="attributes">
+                          <div class="row">
+                            <div class="col-xs-12 col-md-8">
+                              <ul>
+                                <li><span>身故保險金</span><span class="attr_value pull-right">500,000元</span></li>
+                                <li><span>保險期間</span><span class="attr_value pull-right">定期</span></li>
+                                <li><span>非全殘理賠</span><span class="attr_value pull-right">有</span></li>
+                                <li><span>還本</span><span class="attr_value pull-right">有</span></li>
+                                <li>
+                                  <a role="button" data-toggle="collapse" href="#attr_more" aria-expanded="false" aria-controls="attr_more">
+                                    +看更多
+                                  </a>
+                                </li>
+                              </ul>
+                              <div class="collapse" id="attr_more">
+                                <ul class="collapse_ul">
+                                  <li><span>身故保險金</span><span class="attr_value pull-right">500,000元</span></li>
+                                  <li><span>保險期間</span><span class="attr_value pull-right">定期</span></li>
+                                  <li><span>非全殘理賠</span><span class="attr_value pull-right">有</span></li>
+                                  <li><span>還本</span><span class="attr_value pull-right">有</span></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-xs-12 col-md-4">
+                              <div class="adjest_money">
+                                <h5>調整保費小計</h5>
+                                <a href="#" class="btn btn-default btn-xs">－</a>
+                                <span>$12,000</span>
+                                <a href="#" class="btn btn-default btn-xs">＋</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade active in" id="attach_plan">
+                    <div class="row row_adjest">
+                      <div class="col-xs-12 col-md-4">
+                        <div class="list-group">
+                          <div class="list-group-item">
+                            <h4 class="list-group-item-heading company_name">
+                              國泰人壽保險股份有限公司
+                            </h4>
+                            <span class="label label-primary">壽險</span>
+                            <span class="label label-warning">級距一</span>
+                            <p class="list-group-item-text">國泰人壽商品名稱國泰人壽商品名稱國泰人壽商品名稱國泰人壽商品名稱</p>
+                            <div class="price clearfix">
+                              <span class="main_plan_price">保費小計：$12,000</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xs-12 col-md-8">
+                        <div class="attributes">
+                          <div class="row">
+                            <div class="col-xs-12 col-md-8">
+                              <ul>
+                                <li><span>身故保險金</span><span class="attr_value pull-right">500,000元</span></li>
+                                <li><span>保險期間</span><span class="attr_value pull-right">定期</span></li>
+                                <li><span>非全殘理賠</span><span class="attr_value pull-right">有</span></li>
+                                <li><span>還本</span><span class="attr_value pull-right">有</span></li>
+                                <li>
+                                  <a role="button" data-toggle="collapse" href="#attr_more" aria-expanded="false" aria-controls="attr_more">
+                                    +看更多
+                                  </a>
+                                </li>
+                              </ul>
+                              <div class="collapse" id="attr_more">
+                                <ul class="collapse_ul">
+                                  <li><span>身故保險金</span><span class="attr_value pull-right">500,000元</span></li>
+                                  <li><span>保險期間</span><span class="attr_value pull-right">定期</span></li>
+                                  <li><span>非全殘理賠</span><span class="attr_value pull-right">有</span></li>
+                                  <li><span>還本</span><span class="attr_value pull-right">有</span></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-xs-12 col-md-4">
+                              <div class="adjest_money">
+                                <h5>調整保費小計</h5>
+                                <a href="#" class="btn btn-default btn-xs">－</a>
+                                <span>$12,000</span>
+                                <a href="#" class="btn btn-default btn-xs">＋</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row row_adjest">
+                      <div class="col-xs-12 col-md-4">
+                        <div class="list-group">
+                          <div class="list-group-item">
+                            <h4 class="list-group-item-heading company_name">
+                              國泰人壽保險股份有限公司
+                            </h4>
+                            <span class="label label-primary">壽險</span>
+                            <span class="label label-warning">級距一</span>
+                            <p class="list-group-item-text">國泰人壽商品名稱國泰人壽商品名稱國泰人壽商品名稱國泰人壽商品名稱</p>
+                            <div class="price clearfix">
+                              <span class="main_plan_price">保費小計：$12,000</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xs-12 col-md-8">
+                        <div class="attributes">
+                          <div class="row">
+                            <div class="col-xs-12 col-md-8">
+                              <ul>
+                                <li><span>身故保險金</span><span class="attr_value pull-right">500,000元</span></li>
+                                <li><span>保險期間</span><span class="attr_value pull-right">定期</span></li>
+                                <li><span>非全殘理賠</span><span class="attr_value pull-right">有</span></li>
+                                <li><span>還本</span><span class="attr_value pull-right">有</span></li>
+                                <li>
+                                  <a role="button" data-toggle="collapse" href="#attr_more" aria-expanded="false" aria-controls="attr_more">
+                                    +看更多
+                                  </a>
+                                </li>
+                              </ul>
+                              <div class="collapse" id="attr_more">
+                                <ul class="collapse_ul">
+                                  <li><span>身故保險金</span><span class="attr_value pull-right">500,000元</span></li>
+                                  <li><span>保險期間</span><span class="attr_value pull-right">定期</span></li>
+                                  <li><span>非全殘理賠</span><span class="attr_value pull-right">有</span></li>
+                                  <li><span>還本</span><span class="attr_value pull-right">有</span></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-xs-12 col-md-4">
+                              <div class="adjest_money">
+                                <h5>調整保費小計</h5>
+                                <a href="#" class="btn btn-default btn-xs">－</a>
+                                <span>$12,000</span>
+                                <a href="#" class="btn btn-default btn-xs">＋</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row row_adjest">
+                      <div class="col-xs-12 col-md-4">
+                        <div class="list-group">
+                          <div class="list-group-item">
+                            <h4 class="list-group-item-heading company_name">
+                              國泰人壽保險股份有限公司
+                            </h4>
+                            <span class="label label-primary">壽險</span>
+                            <span class="label label-warning">級距一</span>
+                            <p class="list-group-item-text">國泰人壽商品名稱國泰人壽商品名稱國泰人壽商品名稱國泰人壽商品名稱</p>
+                            <div class="price clearfix">
+                              <span class="main_plan_price">保費小計：$12,000</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xs-12 col-md-8">
+                        <div class="attributes">
+                          <div class="row">
+                            <div class="col-xs-12 col-md-8">
+                              <ul>
+                                <li><span>身故保險金</span><span class="attr_value pull-right">500,000元</span></li>
+                                <li><span>保險期間</span><span class="attr_value pull-right">定期</span></li>
+                                <li><span>非全殘理賠</span><span class="attr_value pull-right">有</span></li>
+                                <li><span>還本</span><span class="attr_value pull-right">有</span></li>
+                                <li>
+                                  <a role="button" data-toggle="collapse" href="#attr_more" aria-expanded="false" aria-controls="attr_more">
+                                    +看更多
+                                  </a>
+                                </li>
+                              </ul>
+                              <div class="collapse" id="attr_more">
+                                <ul class="collapse_ul">
+                                  <li><span>身故保險金</span><span class="attr_value pull-right">500,000元</span></li>
+                                  <li><span>保險期間</span><span class="attr_value pull-right">定期</span></li>
+                                  <li><span>非全殘理賠</span><span class="attr_value pull-right">有</span></li>
+                                  <li><span>還本</span><span class="attr_value pull-right">有</span></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-xs-12 col-md-4">
+                              <div class="adjest_money">
+                                <h5>調整保費小計</h5>
+                                <a href="#" class="btn btn-default btn-xs">－</a>
+                                <span>$12,000</span>
+                                <a href="#" class="btn btn-default btn-xs">＋</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">返回</button>
+            <button type="button" class="btn btn-primary">儲存調整內容</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 存入我的ezcare的彈窗 -->
+    <div class="modal" id="save_ezcare">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title">存入我的EZcare</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">確認</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 找業務員提需求的彈窗 -->
+    <div class="modal" id="request">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title">找業務員</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-xs-12 col-md-offset-4 col-md-8">
+                <!-- Nav tabs -->
+                <ul class="nav nav-pills nav-request">
+                  <li class="normal active"><a href="#request-man" aria-controls="request-man" role="tab" data-toggle="tab">保險業務員</a></li>
+                  <li class="normal"><a href="#request-company" aria-controls="request-company" role="tab" data-toggle="tab">保險公司</a></li>
+                </ul>
+              </div>
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="request-man">
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                      <div class="carousel-inner">
+                        <div class="item active">
+                          <div class="request-box">
+                            <a href="##" class="request-img">
+                              <img src="http://i.imgur.com/7V5XycC.jpg" alt="request-img">
+                            </a>
+                            <div class="request-content">
+                              <div class="name">陳小乖</div>
+                              <div class="request-info">
+                                <ul>
+                                  <li>服務地區：台北市、新北市</li>
+                                  <li>年資：五年</li>
+                                  <li><a href="contact.html" target="_blank" class="btn btn-primary btn-block btn-request">前往聯繫<i class="fa fa-long-arrow-right"></i></a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <div class="request-box">
+                            <a href="##" class="request-img">
+                              <img src="http://i.imgur.com/X5hUKRM.png" alt="request-img">
+                            </a>
+                            <div class="request-content">
+                              <div class="name">陳大壞</div>
+                              <div class="request-info">
+                                <ul>
+                                  <li>服務地區：台北市、新北市</li>
+                                  <li>年資：十年</li>
+                                  <li><a href="contact.html" target="_blank" class="btn btn-primary btn-block btn-request">前往聯繫<i class="fa fa-long-arrow-right"></i></a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <div class="request-box">
+                            <a href="##" class="request-img">
+                              <img src="http://i.imgur.com/E5SSC5U.jpg" alt="request-img">
+                            </a>
+                            <div class="request-content">
+                              <div class="name">CC</div>
+                              <div class="request-info">
+                                <ul>
+                                  <li>服務地區：台北市、新北市</li>
+                                  <li>年資：十年</li>
+                                  <li><a href="contact.html" target="_blank" class="btn btn-primary btn-block btn-request">前往聯繫<i class="fa fa-long-arrow-right"></i></a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Controls -->
+                      <div class="control-request">
+                        <a class="left fa fa-chevron-left btn btn-default" href="#carousel-example-generic" data-slide="prev"></a>
+                        <a class="right fa fa-chevron-right btn btn-default" href="#carousel-example-generic" data-slide="next"></a><br>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="request-company">
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="request-box">
+                      <a href="##" class="request-img">
+                        <img src="http://i.imgur.com/fJRHOBW.jpg" alt="request-img">
+                      </a>
+                      <div class="request-content">
+                        <div class="name">國泰人壽</div>
+                        <div class="request-info">
+                          <ul>
+                            <li>客服專線：0800-036-599</li>
+                            <li><a href="" target="_blank" class="btn btn-primary btn-block btn-request">前往聯繫<i class="fa fa-long-arrow-right"></i></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="request-box">
+                  <a href="##" class="request-img">
+                    <img src="http://i.imgur.com/X5hUKRM.png" alt="request-img">
+                  </a>
+                  <div class="request-content">
+                    <div class="name">陳大壞</div>
+                    <div class="request-info">
+                      <ul>
+                        <li>服務地區：全省跑透透</li>
+                        <li>年資：十年</li>
+                        <li><a href="contact.html" target="_blank" class="btn btn-primary btn-block btn-request">前往聯繫<i class="fa fa-long-arrow-right"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+          <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">確認</button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="javascripts/bootstrap.js"></script>
+    <script src="javascripts/bootswatch.js"></script>
+    <script src="javascripts/product_tour.js"></script>
+  </body>
+</html>

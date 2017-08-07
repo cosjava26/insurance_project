@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>險種分類列表頁</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="stylesheet" href="stylesheets/bootstrap.css">
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="index.html" class="navbar-brand">
+            <img src="http://i.imgur.com/mu1138s.png" alt="">
+          </a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="##" id="cd-tour-trigger"><i class="fa fa-lightbulb-o fa-lg glyphicon-user"></i>新手教學</a></li>
+            <!-- <li><a href="##"><i class="fa fa-child fa-lg"></i>人身險</a></li> -->
+            <!-- <li><a href="##"><i class="fa fa-car"></i>車險</a></li> -->
+            <li><a href="##"><span class="glyphicon glyphicon-user"></span>我要登入/註冊</a></li>
+          </ul>
+          <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="輸入金額或關鍵字">
+              <button type="submit" class="btn btn-primary">
+                <span class="glyphicon glyphicon-search"></span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="content_area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <ol class="breadcrumb">
+              <li><a href="#"><span>首頁</span></a></li>
+              <li class="active"><a href="#"><span>險種分類列表</span></a></li>
+            </ol>
+            <div class="panel panel-default panel-topline">
+              <div class="panel-body panel-padding">
+                <form class="form-horizontal">
+                  <fieldset>
+                    <div class="form-group">
+											<div class="col-md-3 col-xs-12">
+												<label class="labe-pandding"><span class="age-words">男性</span>，<span class="age-words">27</span>歲</label>
+											</div>
+											<div class="col-md-9 col-xs-12">
+                        <div class="row">
+                          <div class="col-md-8">
+                            <select class="form-control filter-width" id="select">
+                              <option>出生年</option>
+                              <option>1992年</option>
+                              <option>1993年</option>
+                              <option>1994年</option>
+                              <option>1995年</option>
+                            </select>
+                            <select class="form-control filter-width" id="select">
+                              <option>月</option>
+                              <option>1月</option>
+                              <option>2月</option>
+                              <option>3月</option>
+                              <option>4月</option>
+                              <option>5月</option>
+                            </select>
+                            <div class="btn-group" data-toggle="buttons">
+                              <label class="btn btn-primary">
+                                <input type="radio" name="options" id="option1" autocomplete="off" checked>男
+                              </label>
+                              <label class="btn btn-primary">
+                                <input type="radio" name="options" id="option2" autocomplete="off">女
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-md-4 text-right">
+                            <span class="im_period">保險期間</span>
+                            <div class="btn-group" data-toggle="buttons">
+                              <label class="btn btn-primary">
+                                <input type="radio" name="options" id="option1" autocomplete="off" checked>全部
+                              </label>
+                              <label class="btn btn-primary">
+                                <input type="radio" name="options" id="option2" autocomplete="off">定期
+                              </label>
+                              <label class="btn btn-primary">
+                                <input type="radio" name="options" id="option2" autocomplete="off">終身
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+											</div>
+                    </div>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="search-words"><span class="glyphicon glyphicon-search icon-pandding"></span>找到 <span class="highlight">國泰人壽</span> 共 30筆</h1>
+          </div>
+          <div class="col-md-12">
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#medical" data-toggle="tab" aria-expanded="true">醫療險</a></li>
+              <li class=""><a href="#accident" data-toggle="tab" aria-expanded="false">意外險</a></li>
+              <li class=""><a href="#diseases" data-toggle="tab" aria-expanded="false">重大疾病險</a></li>
+              <a href="#" class="add_kind" data-toggle="modal" data-target="#addNew_kind"><i class="fa fa-plus-circle fa-lg"></i></a>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+              <div class="tab-pane fade active in" id="medical">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                  +進階條件
+                </button>
+                <div class="collapse" id="collapseExample">
+                  <div class="well">
+                    <span>住院金保額</span>
+                    <ul class="advance_choice">
+                      <li><a href="##">1000元以下</a></li>
+                      <li><a href="##" class="current">1001元~2000元</a></li>
+                      <li><a href="##">2001元~3000元</a></li>
+                      <li><a href="##">3001元以上</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="table-responsive">
+                  <table class="table table-bordered table-font">
+                    <thead class="thead">
+                      <tr>
+                        <th class="company_name">保險公司</th>
+                        <th class="company_p_name">保險名稱</th>
+                        <th>年繳額<a href="##" class="sort"><i class="fa fa-sort"></i></a></th>
+                        <th>主附約
+                          <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="所有附約都必須搭配一項主約"></i>
+                        </th>
+                        <th>保證續保</th>
+                        <th>延續條款</th>
+                        <th>實支/日額</th>
+                        <th>住院金<a href="##" class="sort"><i class="fa fa-sort"></i></a></th>
+                        <th>雜項限額<a href="##" class="sort"><i class="fa fa-sort"></i></a></th>
+                        <th>手術限額<a href="##" class="sort"><i class="fa fa-sort"></i></a></th>
+                        <th>門診手術</th>
+                        <th>列舉型式</th>
+                        <th>副本理賠</th>
+                        <th class="danger add_plan">加入計劃</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="pr-box">
+                        <td class="company_name">國泰人壽</td>
+                        <td class="text-left company_p_name">
+                          <span class="label label-warning recommend_tag"><i class="fa fa-thumbs-up"></i>推薦</span>
+                          國泰人壽商品名稱國泰人壽商品名稱
+                        </td>
+                        <td>7000元</td>
+                        <td>主約</td>
+                        <td>有</td>
+                        <td>有</td>
+                        <td>實支</td>
+                        <td>2000<br>元/日</td>
+                        <td>2500<br>元/次</td>
+                        <td>2500<br>元/次</td>
+                        <td>有</td>
+                        <td>概括式</td>
+                        <td>有</td>
+                        <td class="text-center">
+                          <div class="c-checkbox">
+                            <label>
+                              <input type="checkbox" />
+                              <span class="fa fa-check red-checkbox"></span>
+                            </label>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="company_name">國泰人壽</td>
+                        <td class="text-left company_p_name">國泰人壽商品名稱國泰人壽商品名稱</td>
+                        <td>7000元</td>
+                        <td>主約</td>
+                        <td>有</td>
+                        <td>有</td>
+                        <td>實支</td>
+                        <td>2000<br>元/日</td>
+                        <td>2500<br>元/次</td>
+                        <td>2500<br>元/次</td>
+                        <td>有</td>
+                        <td>概括式</td>
+                        <td>有</td>
+                        <td class="text-center">
+                          <div class="c-checkbox">
+                            <label>
+                              <input type="checkbox" />
+                              <span class="fa fa-check red-checkbox"></span>
+                            </label>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="company_name">國泰人壽</td>
+                        <td class="text-left company_p_name">國泰人壽商品名稱國泰人壽商品名稱</td>
+                        <td>7000元</td>
+                        <td>主約</td>
+                        <td>有</td>
+                        <td>有</td>
+                        <td>實支</td>
+                        <td>2000<br>元/日</td>
+                        <td>2500<br>元/次</td>
+                        <td>2500<br>元/次</td>
+                        <td>有</td>
+                        <td>概括式</td>
+                        <td>有</td>
+                        <td class="text-center">
+                          <div class="c-checkbox">
+                            <label>
+                              <input type="checkbox" />
+                              <span class="fa fa-check red-checkbox"></span>
+                            </label>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="company_name">國泰人壽</td>
+                        <td class="text-left company_p_name">國泰人壽商品名稱國泰人壽商品名稱</td>
+                        <td>7000元</td>
+                        <td>主約</td>
+                        <td>有</td>
+                        <td>有</td>
+                        <td>實支</td>
+                        <td>2000<br>元/日</td>
+                        <td>2500<br>元/次</td>
+                        <td>2500<br>元/次</td>
+                        <td>有</td>
+                        <td>概括式</td>
+                        <td>有</td>
+                        <td class="text-center">
+                          <div class="c-checkbox">
+                            <label>
+                              <input type="checkbox" />
+                              <span class="fa fa-check red-checkbox"></span>
+                            </label>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="company_name">國泰人壽</td>
+                        <td class="text-left company_p_name">國泰人壽商品名稱國泰人壽商品名稱</td>
+                        <td>7000元</td>
+                        <td>主約</td>
+                        <td>有</td>
+                        <td>有</td>
+                        <td>實支</td>
+                        <td>2000<br>元/日</td>
+                        <td>2500<br>元/次</td>
+                        <td>2500<br>元/次</td>
+                        <td>有</td>
+                        <td>概括式</td>
+                        <td>有</td>
+                        <td class="text-center">
+                          <div class="c-checkbox">
+                            <label>
+                              <input type="checkbox" />
+                              <span class="fa fa-check red-checkbox"></span>
+                            </label>
+                          </div>
+                        </td>
+                      </tr>    
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="tab-pane fade active in" id="accident">
+                <div class="table-responsive">
+                  <table class="table table-bordered table-font">
+                    <thead class="thead">
+                      <tr>
+                        <th>保險公司</th>
+                        <th>保險名稱</th>
+                        <th>年繳額<a href="##" class="sort"><i class="fa fa-sort"></i></a></th>
+                        <th>主附約
+                          <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="所有附約都必須搭配一項主約"></i>
+                        </th>
+                        <th>保證續保</th>
+                        <th>延續條款</th>
+                        <th>實支/日額</th>
+                        <th>住院金<a href="##" class="sort"><i class="fa fa-sort"></i></a></th>
+                        <th>雜項限額<a href="##" class="sort"><i class="fa fa-sort"></i></a></th>
+                        <th>手術限額<a href="##" class="sort"><i class="fa fa-sort"></i></a></th>
+                        <th>門診手術</th>
+                        <th>列舉型式</th>
+                        <th>副本理賠</th>
+                        <th class="danger add_plan">加入計劃</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="pr-box">
+                        <td class="company_name">國泰人壽</td>
+                        <td class="text-left company_p_name">國泰人壽商品名稱國泰人壽商品名稱</td>
+                        <td>7000元</td>
+                        <td>主約</td>
+                        <td>有</td>
+                        <td>有</td>
+                        <td>實支</td>
+                        <td>2000<br>元/日</td>
+                        <td>2500<br>元/次</td>
+                        <td>2500<br>元/次</td>
+                        <td>有</td>
+                        <td>概括式</td>
+                        <td>有</td>
+                        <td class="text-center">
+                          <div class="c-checkbox">
+                            <label>
+                              <input type="checkbox" />
+                              <span class="fa fa-check red-checkbox"></span>
+                            </label>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="company_name">國泰人壽</td>
+                        <td class="text-left company_p_name">國泰人壽商品名稱國泰人壽商品名稱</td>
+                        <td>7000元</td>
+                        <td>主約</td>
+                        <td>有</td>
+                        <td>有</td>
+                        <td>實支</td>
+                        <td>2000<br>元/日</td>
+                        <td>2500<br>元/次</td>
+                        <td>2500<br>元/次</td>
+                        <td>有</td>
+                        <td>概括式</td>
+                        <td>有</td>
+                        <td class="text-center">
+                          <div class="c-checkbox">
+                            <label>
+                              <input type="checkbox" />
+                              <span class="fa fa-check red-checkbox"></span>
+                            </label>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="company_name">國泰人壽</td>
+                        <td class="text-left company_p_name">國泰人壽商品名稱國泰人壽商品名稱</td>
+                        <td>7000元</td>
+                        <td>主約</td>
+                        <td>有</td>
+                        <td>有</td>
+                        <td>實支</td>
+                        <td>2000<br>元/日</td>
+                        <td>2500<br>元/次</td>
+                        <td>2500<br>元/次</td>
+                        <td>有</td>
+                        <td>概括式</td>
+                        <td>有</td>
+                        <td class="text-center">
+                          <div class="c-checkbox">
+                            <label>
+                              <input type="checkbox" />
+                              <span class="fa fa-check red-checkbox"></span>
+                            </label>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="company_name">國泰人壽</td>
+                        <td class="text-left company_p_name">國泰人壽商品名稱國泰人壽商品名稱</td>
+                        <td>7000元</td>
+                        <td>主約</td>
+                        <td>有</td>
+                        <td>有</td>
+                        <td>實支</td>
+                        <td>2000<br>元/日</td>
+                        <td>2500<br>元/次</td>
+                        <td>2500<br>元/次</td>
+                        <td>有</td>
+                        <td>概括式</td>
+                        <td>有</td>
+                        <td class="text-center">
+                          <div class="c-checkbox">
+                            <label>
+                              <input type="checkbox" />
+                              <span class="fa fa-check red-checkbox"></span>
+                            </label>
+                          </div>
+                        </td>
+                      </tr>    
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="tab-pane fade active in" id="diseases">
+                <div class="table-responsive">
+                  <table class="table table-bordered table-font">
+                    <thead class="thead">
+                      <tr>
+                        <th>保險公司</th>
+                        <th>保險名稱</th>
+                        <th>年繳額<a href="##" class="sort"><i class="fa fa-sort"></i></a></th>
+                        <th>主附約
+                          <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="所有附約都必須搭配一項主約"></i>
+                        </th>
+                        <th>保證續保</th>
+                        <th>延續條款</th>
+                        <th>實支/日額</th>
+                        <th>住院金<a href="##" class="sort"><i class="fa fa-sort"></i></a></th>
+                        <th>雜項限額<a href="##" class="sort"><i class="fa fa-sort"></i></a></th>
+                        <th>手術限額<a href="##" class="sort"><i class="fa fa-sort"></i></a></th>
+                        <th>門診手術</th>
+                        <th>列舉型式</th>
+                        <th>副本理賠</th>
+                        <th class="danger add_plan">加入計劃</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="pr-box">
+                        <td class="company_name">國泰人壽</td>
+                        <td class="text-left company_p_name">國泰人壽商品名稱國泰人壽商品名稱</td>
+                        <td>7000元</td>
+                        <td>主約</td>
+                        <td>有</td>
+                        <td>有</td>
+                        <td>實支</td>
+                        <td>2000<br>元/日</td>
+                        <td>2500<br>元/次</td>
+                        <td>2500<br>元/次</td>
+                        <td>有</td>
+                        <td>概括式</td>
+                        <td>有</td>
+                        <td class="text-center">
+                          <div class="c-checkbox">
+                            <label>
+                              <input type="checkbox" />
+                              <span class="fa fa-check red-checkbox"></span>
+                            </label>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="company_name">國泰人壽</td>
+                        <td class="text-left company_p_name">國泰人壽商品名稱國泰人壽商品名稱</td>
+                        <td>7000元</td>
+                        <td>主約</td>
+                        <td>有</td>
+                        <td>有</td>
+                        <td>實支</td>
+                        <td>2000<br>元/日</td>
+                        <td>2500<br>元/次</td>
+                        <td>2500<br>元/次</td>
+                        <td>有</td>
+                        <td>概括式</td>
+                        <td>有</td>
+                        <td class="text-center">
+                          <div class="c-checkbox">
+                            <label>
+                              <input type="checkbox" />
+                              <span class="fa fa-check red-checkbox"></span>
+                            </label>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="company_name">國泰人壽</td>
+                        <td class="text-left company_p_name">國泰人壽商品名稱國泰人壽商品名稱</td>
+                        <td>7000元</td>
+                        <td>主約</td>
+                        <td>有</td>
+                        <td>有</td>
+                        <td>實支</td>
+                        <td>2000<br>元/日</td>
+                        <td>2500<br>元/次</td>
+                        <td>2500<br>元/次</td>
+                        <td>有</td>
+                        <td>概括式</td>
+                        <td>有</td>
+                        <td class="text-center">
+                          <div class="c-checkbox">
+                            <label>
+                              <input type="checkbox" />
+                              <span class="fa fa-check red-checkbox"></span>
+                            </label>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="company_name">國泰人壽</td>
+                        <td class="text-left company_p_name">國泰人壽商品名稱國泰人壽商品名稱</td>
+                        <td>7000元</td>
+                        <td>主約</td>
+                        <td>有</td>
+                        <td>有</td>
+                        <td>實支</td>
+                        <td>2000<br>元/日</td>
+                        <td>2500<br>元/次</td>
+                        <td>2500<br>元/次</td>
+                        <td>有</td>
+                        <td>概括式</td>
+                        <td>有</td>
+                        <td class="text-center">
+                          <div class="c-checkbox">
+                            <label>
+                              <input type="checkbox" />
+                              <span class="fa fa-check red-checkbox"></span>
+                            </label>
+                          </div>
+                        </td>
+                      </tr>    
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <ul class="pagination pagination-lg">
+              <li class="disabled"><a href="#">«</a></li>
+              <li class="active"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">»</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2">
+            <h4><a href="##">壽險</a></h4>
+            <ul>
+              <li><a href="##">投保額</a></li>
+            </ul>
+            <h4 class="sec"><a href="##">重大疾病險</a></h4>
+            <ul>
+              <li><a href="##">投保額</a></li>
+              <li><a href="##">身故金(上限)</a></li>
+              <li><a href="##">項目</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <h4><a href="##">醫療險</a></h4>
+            <ul>
+              <li><a href="##">住院補助金</a></li>
+              <li><a href="##">手術額度</a></li>
+              <li><a href="##">雜項額度</a></li>
+              <li><a href="##">型類(實支型/日額型)</a></li>
+              <li><a href="##">身故金(上限)</a></li>
+              <li><a href="##">門診手術(有/無)</a></li>
+              <li><a href="##">門診手術雜支(有/無)</a></li>
+              <li><a href="##">列舉型式(概括式/條列式)</a></li>
+              <li><a href="##">副本理賠(有/無)</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <h4><a href="##">殘廢險</a></h4>
+            <ul>
+              <li><a href="##">一次給付額</a></li>
+              <li><a href="##">按月給付額</a></li>
+            </ul>
+            <h4 class="sec"><a href="##">豁免險</a></h4>
+            <ul>
+              <li><a href="##">豁免對象(要保被保同一人)</a></li>
+              <li><a href="##">殘廢(有/無)</a></li>
+              <li><a href="##">重大疾病(有/無)</a></li>
+              <li><a href="##">要保人身故(有/無)</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <h4><a href="##">癌症險</a></h4>
+            <ul>
+              <li><a href="##">罹癌金</a></li>
+              <li><a href="##">定額門診金</a></li>
+              <li><a href="##">住院金</a></li>
+              <li><a href="##">手術金(總額)</a></li>
+              <li><a href="##">化療金</a></li>
+              <li><a href="##">放射線治療金</a></li>
+              <li><a href="##">骨隨移植金</a></li>
+              <li><a href="##">義(肢)乳重建金</a></li>
+              <li><a href="##">癌症身故金</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <h4><a href="##">意外險</a></h4>
+            <ul>
+              <li><a href="##">手術補助金</a></li>
+              <li><a href="##">身故金</a></li>
+              <li><a href="##">型類(實支型/日額型)</a></li>
+              <li><a href="##">殘廢金</a></li>
+              <li><a href="##">意外醫療(門診+雜支/有無)</a></li>
+              <li><a href="##">意外住院金</a></li>
+              <li><a href="##">骨折</a></li>
+              <li><a href="##">大眾交通運輸加倍</a></li>
+              <li><a href="##">特定事故</a></li>
+              <li><a href="##">副本理賠(有/無)</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <h4><a href="##">看護險</a></h4>
+            <ul>
+              <li><a href="##">療養金(一次)</a></li>
+              <li><a href="##">看護金(年)</a></li>
+              <li><a href="##">身故金(有/無)</a></li>
+            </ul>
+            <h4 class="sec"><a href="##">重大傷病卡保險</a></h4>
+            <ul>
+              <li><a href="##">投保額</a></li>
+              <li><a href="##">身故金(上限)</a></li>
+              <li><a href="##">項目(符合重大傷病卡)</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <h5 class="copyright">© 2015 EZprice Co., Ltd. All rights reserved.</h5>
+    </footer>
+    <a href="##" class="add-plan no-plan" data-toggle="modal" data-target="#next_step">
+      主約(3).附約(2)
+      <span class="glyphicon glyphicon-menu-right"></span>
+    </a>
+    <!-- 意見回饋 -->
+    <a href="##" class="feeback" data-toggle="modal" data-target="#next_step">
+      意<br>見<br>回<br>饋<br>
+      <i class="fa fa-question-circle"></i>
+    </a>
+    <!-- 提醒主附約的彈窗 -->
+    <div class="modal" id="next_step" aria-labelledby="myLargeModalLabel" >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="row">
+            <div class="col-md-12">
+              <img src="http://i.imgur.com/cSRx2Sc.png" alt="img" class="img-responsive img_center">
+            </div>
+          </div>
+          <!-- <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title">一份成立的保單，需要有一個主約來搭配其他附約，要試算保單時，記得一定要加入主約喔。</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="main_border">
+                  <h4 class="text-center">主約</h4>
+                </div>
+              </div>
+              <div class="col-md-1 text-center add_padding">
+                <h4><span class="glyphicon glyphicon-plus-sign"></span></h4>
+              </div>
+              <div class="col-md-4">
+                <div class="attach_border">
+                  <h4 class="text-center">附約</h4>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="attach_border">
+                  <h4 class="text-center">附約</h4>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <a href="simulator.html" class="btn btn-primary">我知道了！試算去</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 新增屬性的彈窗 -->
+    <div class="modal" id="addNew_kind">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title">新增險別</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox"> 壽險
+                  </label>
+                  <label>
+                    <input type="checkbox"> 重大疾病險
+                  </label>
+                  <label>
+                    <input type="checkbox"> 醫療險
+                  </label>
+                  <label>
+                    <input type="checkbox"> 殘廢險
+                  </label>
+                  <label>
+                    <input type="checkbox"> 豁免險
+                  </label>
+                  <label>
+                    <input type="checkbox"> 癌症險
+                  </label>
+                  <label>
+                    <input type="checkbox"> 意外險
+                  </label>
+                  <label>
+                    <input type="checkbox"> 看護險
+                  </label>
+                  <label>
+                    <input type="checkbox"> 重大傷病卡保險
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">返回</button>
+            <button type="button" class="btn btn-primary">確定新增</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- product-tour-->   
+    <ul class="cd-tour-wrapper list-cd-tour-wrapper">
+      <li class="cd-single-step list-cd-single-step">
+        <span>Step 1</span>
+
+        <div class="cd-more-info bottom">
+          <h2>第一步</h2>
+          <p>設定你的年齡及性別</p>
+          <img src="http://i.imgur.com/wDxER6E.png" alt="step 1" class="img-responsive">
+        </div>
+      </li> <!-- .cd-single-step -->
+
+      <li class="cd-single-step list-cd-single-step">
+        <span>Step 2</span>
+
+        <div class="cd-more-info top">
+          <h2>第二步</h2>
+          <p>根據你的搜尋內容，過濾出有哪些險種</p>
+          <img src="http://i.imgur.com/MB9wlje.png" alt="step 2" class="img-responsive">
+        </div>
+      </li> <!-- .cd-single-step -->
+
+      <li class="cd-single-step list-cd-single-step">
+        <span>Step 3</span>
+
+        <div class="cd-more-info left">
+          <h2>第三步</h2>
+          <p>將有興趣的保單"加入計劃"</p>
+          <img src="http://i.imgur.com/mTdNIi9.png" alt="step 3" class="img-responsive">
+        </div>
+      </li> <!-- .cd-single-step -->
+
+      <li class="cd-single-step list-cd-single-step">
+        <span>Step 4</span>
+
+        <div class="cd-more-info top">
+          <h2>第四步</h2>
+          <p>找好有興趣的保單了嗎？開始來規劃一份完整的保險計畫！</p>
+          <img src="http://i.imgur.com/XxfsLgN.png" alt="step 4" class="img-responsive">
+        </div>
+      </li> <!-- .cd-single-step -->
+    </ul> <!-- .cd-tour-wrapper -->
+    <div class="cd-cover-layer"></div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="javascripts/bootstrap.js"></script>
+    <script src="javascripts/bootswatch.js"></script>
+    <script src="javascripts/product_tour.js"></script>
+  </body>
+</html>

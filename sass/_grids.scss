@@ -1,0 +1,43 @@
+@import 'compass';
+@import 'susy';
+@import 'breakpoint';
+@import 'compass/reset';
+$susy: (
+ columns:12,
+ math: fulid,
+ column-width:60px,
+ gutter-position: after,
+ gutters:1/3,
+ debug:(image:true) 
+);
+@include border-box-sizing;
+.header{
+  background: pink;  //第一層DIV父元素是瀏覽器，所以會隨著螢幕解析度自適應延伸
+}
+.header-inner {
+  @include container() ;
+  
+   height:80px; 
+   background:orange;
+}
+.container{
+  @include container
+}
+.sidebar{
+  @include span(3);
+  height: 50px;
+  background:blue;
+  color: #fff;
+  padding-left: 50px;
+}
+.main{
+  @include span(9 last); 
+  background:black;
+  color:#fff; 
+  height: 50px;
+}
+.footer{
+  height: 50px;
+  background:red;
+  @include nobreak
+}

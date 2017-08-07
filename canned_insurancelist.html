@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>罐頭保單列表</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="stylesheet" href="stylesheets/bootstrap.css">
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+  <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.5&appId=205059872856036";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="index.html" class="navbar-brand">
+            <img src="http://i.imgur.com/PGeFgQ6.png" alt="">
+          </a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="##" data-toggle="modal" data-target="#login"><span class="glyphicon glyphicon-user"></span>我要登入/註冊</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              <img src="http://i.imgur.com/ckl0bKH.jpg" alt="頭像" class="img-circle img-size">
+              Jennifer Chen <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="mycare.html" target="_blank"><i class="fa fa-heartbeat fa-padding"></i>我的保險清單</a></li>
+                <li class="divider"></li>
+                <li><a href="member.html" target="_blank"><i class="fa fa-file-text-o fa-padding"></i>設定</a></li>
+                <li class="divider"></li>
+                <li><a href="#"><i class="fa fa-power-off fa-padding"></i>登出</a></li>
+              </ul>
+            </li>
+            <li><a href="##"><i class="fa fa-comments-o glyphicon-user"></i>意見回饋</a></li>
+            <!-- <li><a href="##" id="cd-tour-trigger"><i class="fa fa-lightbulb-o fa-lg glyphicon-user"></i>新手教學</a></li> -->
+            <!-- <li><a href="##"><i class="fa fa-child fa-lg"></i>人身險</a></li> -->
+            <!-- <li><a href="##"><i class="fa fa-car"></i>車險</a></li> -->
+          </ul>
+          <!-- <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="輸入金額或關鍵字">
+              <button type="submit" class="btn btn-primary">
+                <span class="glyphicon glyphicon-search"></span>
+              </button>
+            </div>
+          </form> -->
+        </div>
+      </div>
+    </div>
+    <div class="content_area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <ol class="breadcrumb">
+              <li><a href="#"><span>首頁</span></a></li>
+              <li class="active"><a href="#"><span>0歲新生兒的推薦保單</span></a></li>
+            </ol>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <h1 class="canned_title clearfix">
+              各家保險公司0歲新生兒罐頭平民保單
+              <div class="share_btn clearfix">
+                <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count"></div>
+              </div>
+            </h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="canned_content_head clearfix">
+              <div class="intro">
+                依照<a href="https://www.ptt.cc/bbs/BabyMother/M.1406122978.A.9FD.html">PTT駐版醫師archies</a>提供的三原則：年繳保費不超過一萬五、定期實支實付醫療險、一次給付並包含兒童癌症的重大疾病險，將
+                <a href="http://www.mobile01.com/topicdetail.php?f=375&t=4207538&p=1">mobile01的InsuranceKnight大大</a>和
+                <a href="https://www.ptt.cc/bbs/Insurance/M.1334240407.A.80D.html">PTT保險板Apin大大的罐頭保單</a>加上試算功能，方便讓新手爸媽可以自行調整預算比較保費
+              </div>
+              <div class="switch">
+                <div class='gender'>
+                  <input checked id='q1' name='q' type='radio' value='q1'>
+                  <label for='q1'>男寶寶</label>
+                </div>
+                <div class='gender'>
+                  <input id='q2' name='q' type='radio' value='q2'>
+                  <label for='q2'>女寶寶</label>
+                </div>
+              </div>
+              <span class="notes">共12筆推薦保單，推薦時間2015/10/23</span>
+              <a href="##" class="notes_link">想自己搭配保單？</a>
+            </div>
+            <div class="canned_content">
+              <div class="canned_insurance_list">
+                <div class="canned_insurance_title clearfix">
+                  <a href="##" class="company_img">
+                    <img src="images/company_1.jpg" alt="company_img">
+                  </a>
+                  <h4 class="canned_company_name">三商美邦人壽</h4>
+                  <div class="btn_love pull-right">
+                    <i class="love" data-toggle="tooltip" data-placement="bottom" title="收藏"></i>
+                  </div>
+                </div>
+                <div class="canned_insurance_detail">
+                  <div class="row">
+                    <div class="col-xs-12 col-md-10">
+                      <ol>
+                        <li>
+                          <span>主約</span>
+                          <span class="canned_kind">壽險</span>
+                          <span>終身</span>
+                          <span class="pd_name">
+                            <a href="##">祥安心終身壽險</a>
+                            <span class="time_pay">20期</span>
+                          </span>
+                          <span>
+                            <div>
+                              身故保險金
+                              <span>20萬元</span>
+                            </div>
+                          </span>
+                          <span  class="subtotal">
+                            <div>
+                              小計
+                              <span>2,200元/年</span>
+                            </div>
+                          </span>
+                        </li>
+                        <!-- <li>
+                          <span>附約</span>
+                          <span class="canned_kind">醫療險</span>
+                          <span>定期</span>
+                          <span class="pd_name">
+                            常春住院醫療保險附約
+                            <span class="time_pay">20期</span>
+                          </span>
+                          <span>
+                            <div>
+                              住院保險金
+                              <span>3,000元/日</span>
+                            </div>
+                          </span>
+                          <span  class="subtotal">
+                            <div>
+                              小計
+                              <span>3,840元/年</span>
+                            </div>
+                          </span>
+                        </li>
+                        <li>
+                          <span>附約</span>
+                          <span class="canned_kind">重大疾病險</span>
+                          <span>定期</span>
+                          <span class="pd_name">
+                            友安一年定期重大疾病健康保險附約
+                            <span class="time_pay">20期</span>
+                          </span>
+                          <span>
+                            <div>
+                              重疾首次金
+                              <span>200萬元</span>
+                            </div>
+                          </span>
+                          <span  class="subtotal">
+                            <div>
+                              小計
+                              <span>5,974元/年</span>
+                            </div>
+                          </span>
+                        </li> -->
+                      </ol>
+                    </div>
+                    <div class="col-xs-12 col-md-2">
+                      <h4 class="canned_total">
+                        <span>年繳保費</span><br>
+                        1,234<span class="unit">元/年</span>
+                      </h4>
+                      <a href="##" class="btn btn-primary btn-block btn-count"><i class="fa fa-usd"></i>調整我的預算</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="canned_insurance_list">
+                <div class="canned_insurance_title clearfix">
+                  <a href="##" class="company_img">
+                    <img src="images/company_2.jpg" alt="company_img">
+                  </a>
+                  <h4 class="canned_company_name">國泰人壽</h4>
+                  <div class="btn_love pull-right">
+                    <i class="love on" data-toggle="tooltip" data-placement="bottom" title="已收藏"></i>
+                  </div>
+                </div>
+                <div class="canned_insurance_detail">
+                  <div class="row">
+                    <div class="col-md-10">
+                      <ol>
+                        <li>
+                          <span>主約</span>
+                          <span class="canned_kind">壽險</span>
+                          <span>終身</span>
+                          <span class="pd_name">
+                            <a href="##">祥安心終身壽險</a>
+                            <span class="time_pay">20期</span>
+                          </span>
+                          <span>
+                            <div>
+                              身故保險金
+                              <span>20萬元</span>
+                            </div>
+                          </span>
+                          <span  class="subtotal">
+                            <div>
+                              小計
+                              <span>2,200元/年</span>
+                            </div>
+                          </span>
+                        </li>
+                        <li>
+                          <span>附約</span>
+                          <span class="canned_kind">醫療險</span>
+                          <span>定期</span>
+                          <span class="pd_name">
+                            <a href="##">常春住院醫療保險附約</a>
+                            <span class="time_pay">20期</span>
+                          </span>
+                          <span>
+                            <div>
+                              住院保險金
+                              <span>3,000元/日</span>
+                            </div>
+                          </span>
+                          <span  class="subtotal">
+                            <div>
+                              小計
+                              <span>3,840元/年</span>
+                            </div>
+                          </span>
+                        </li>
+                        <li>
+                          <span>附約</span>
+                          <span class="canned_kind">重大疾病險</span>
+                          <span>定期</span>
+                          <span class="pd_name">
+                            <a href="##">友安一年定期重大疾病健康保險附約</a>
+                            <span class="time_pay">20期</span>
+                          </span>
+                          <span>
+                            <div>
+                              重疾首次金
+                              <span>200萬元</span>
+                            </div>
+                          </span>
+                          <span  class="subtotal">
+                            <div>
+                              小計
+                              <span>5,974元/年</span>
+                            </div>
+                          </span>
+                        </li>
+                      </ol>
+                    </div>
+                    <div class="col-md-2">
+                      <h4 class="canned_total">
+                        <span>年繳保費</span><br>
+                        1,234<span class="unit">元/年</span>
+                      </h4>
+                      <a href="##" class="btn btn-primary btn-block btn-count"><i class="fa fa-usd"></i>調整我的預算</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="canned_insurance_list">
+                <div class="canned_insurance_title clearfix">
+                  <a href="##" class="company_img">
+                    <img src="images/company_3.jpg" alt="company_img">
+                  </a>
+                  <h4 class="canned_company_name">南山人壽</h4>
+                  <div class="btn_love pull-right">
+                    <i class="love on" data-toggle="tooltip" data-placement="bottom" title="已收藏"></i>
+                  </div>
+                </div>
+                <div class="canned_insurance_detail">
+                  <div class="row">
+                    <div class="col-md-10">
+                      <ol>
+                        <li>
+                          <span>主約</span>
+                          <span class="canned_kind">壽險</span>
+                          <span>終身</span>
+                          <span class="pd_name">
+                            <a href="##">祥安心終身壽險</a>
+                            <span class="time_pay">20期</span>
+                          </span>
+                          <span>
+                            <div>
+                              身故保險金
+                              <span>20萬元</span>
+                            </div>
+                          </span>
+                          <span  class="subtotal">
+                            <div>
+                              小計
+                              <span>2,200元/年</span>
+                            </div>
+                          </span>
+                        </li>
+                        <li>
+                          <span>附約</span>
+                          <span class="canned_kind">醫療險</span>
+                          <span>定期</span>
+                          <span class="pd_name">
+                            <a href="##">常春住院醫療保險附約</a>
+                            <span class="time_pay">20期</span>
+                          </span>
+                          <span>
+                            <div>
+                              住院保險金
+                              <span>3,000元/日</span>
+                            </div>
+                          </span>
+                          <span  class="subtotal">
+                            <div>
+                              小計
+                              <span>3,840元/年</span>
+                            </div>
+                          </span>
+                        </li>
+                        <li>
+                          <span>附約</span>
+                          <span class="canned_kind">重大疾病險</span>
+                          <span>定期</span>
+                          <span class="pd_name">
+                            <a href="##">友安一年定期重大疾病健康保險附約</a>
+                            <span class="time_pay">20期</span>
+                          </span>
+                          <span>
+                            <div>
+                              重疾首次金
+                              <span>200萬元</span>
+                            </div>
+                          </span>
+                          <span  class="subtotal">
+                            <div>
+                              小計
+                              <span>5,974元/年</span>
+                            </div>
+                          </span>
+                        </li>
+                      </ol>
+                    </div>
+                    <div class="col-md-2">
+                      <h4 class="canned_total">
+                        <span>年繳保費</span><br>
+                        1,234<span class="unit">元/年</span>
+                      </h4>
+                      <a href="##" class="btn btn-primary btn-block btn-count"><i class="fa fa-usd"></i>調整我的預算</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="canned_insurance_list">
+                <div class="canned_insurance_title clearfix">
+                  <a href="##" class="company_img">
+                    <img src="images/company_4.jpg" alt="company_img">
+                  </a>
+                  <h4 class="canned_company_name">新光人壽</h4>
+                  <div class="btn_love pull-right">
+                    <i class="love" data-toggle="tooltip" data-placement="bottom" title="已收藏"></i>
+                  </div>
+                </div>
+                <div class="canned_insurance_detail">
+                  <div class="row">
+                    <div class="col-md-10">
+                      <ol>
+                        <li>
+                          <span>主約</span>
+                          <span class="canned_kind">壽險</span>
+                          <span>終身</span>
+                          <span class="pd_name">
+                            <a href="##">祥安心終身壽險</a>
+                            <span class="time_pay">20期</span>
+                          </span>
+                          <span>
+                            <div>
+                              身故保險金
+                              <span>20萬元</span>
+                            </div>
+                          </span>
+                          <span  class="subtotal">
+                            <div>
+                              小計
+                              <span>2,200元/年</span>
+                            </div>
+                          </span>
+                        </li>
+                        <li>
+                          <span>附約</span>
+                          <span class="canned_kind">醫療險</span>
+                          <span>定期</span>
+                          <span class="pd_name">
+                            <a href="##">常春住院醫療保險附約</a>
+                            <span class="time_pay">20期</span>
+                          </span>
+                          <span>
+                            <div>
+                              住院保險金
+                              <span>3,000元/日</span>
+                            </div>
+                          </span>
+                          <span  class="subtotal">
+                            <div>
+                              小計
+                              <span>3,840元/年</span>
+                            </div>
+                          </span>
+                        </li>
+                        <li>
+                          <span>附約</span>
+                          <span class="canned_kind">重大疾病險</span>
+                          <span>定期</span>
+                          <span class="pd_name">
+                            <a href="##">友安一年定期重大疾病健康保險附約</a>
+                            <span class="time_pay">20期</span>
+                          </span>
+                          <span>
+                            <div>
+                              重疾首次金
+                              <span>200萬元</span>
+                            </div>
+                          </span>
+                          <span  class="subtotal">
+                            <div>
+                              小計
+                              <span>5,974元/年</span>
+                            </div>
+                          </span>
+                        </li>
+                      </ol>
+                    </div>
+                    <div class="col-md-2">
+                      <h4 class="canned_total">
+                        <span>年繳保費</span><br>
+                        1,234<span class="unit">元/年</span>
+                      </h4>
+                      <a href="##" class="btn btn-primary btn-block btn-count"><i class="fa fa-usd"></i>調整我的預算</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="canned_insurance_list">
+                <div class="canned_insurance_title clearfix">
+                  <a href="##" class="company_img">
+                    <img src="images/company_5.jpg" alt="company_img">
+                  </a>
+                  <h4 class="canned_company_name">友邦人壽</h4>
+                  <div class="btn_love pull-right">
+                    <i class="love" data-toggle="tooltip" data-placement="bottom" title="已收藏"></i>
+                  </div>
+                </div>
+                <div class="canned_insurance_detail">
+                  <div class="row">
+                    <div class="col-md-10">
+                      <ol>
+                        <li>
+                          <span>主約</span>
+                          <span class="canned_kind">壽險</span>
+                          <span>終身</span>
+                          <span class="pd_name">
+                            <a href="##">祥安心終身壽險</a>
+                            <span class="time_pay">20期</span>
+                          </span>
+                          <span>
+                            <div>
+                              身故保險金
+                              <span>20萬元</span>
+                            </div>
+                          </span>
+                          <span  class="subtotal">
+                            <div>
+                              小計
+                              <span>2,200元/年</span>
+                            </div>
+                          </span>
+                        </li>
+                        <li>
+                          <span>附約</span>
+                          <span class="canned_kind">醫療險</span>
+                          <span>定期</span>
+                          <span class="pd_name">
+                            <a href="##">常春住院醫療保險附約</a>
+                            <span class="time_pay">20期</span>
+                          </span>
+                          <span>
+                            <div>
+                              住院保險金
+                              <span>3,000元/日</span>
+                            </div>
+                          </span>
+                          <span  class="subtotal">
+                            <div>
+                              小計
+                              <span>3,840元/年</span>
+                            </div>
+                          </span>
+                        </li>
+                        <li>
+                          <span>附約</span>
+                          <span class="canned_kind">重大疾病險</span>
+                          <span>定期</span>
+                          <span class="pd_name">
+                            <a href="##">友安一年定期重大疾病健康保險附約</a>
+                            <span class="time_pay">20期</span>
+                          </span>
+                          <span>
+                            <div>
+                              重疾首次金
+                              <span>200萬元</span>
+                            </div>
+                          </span>
+                          <span  class="subtotal">
+                            <div>
+                              小計
+                              <span>5,974元/年</span>
+                            </div>
+                          </span>
+                        </li>
+                      </ol>
+                    </div>
+                    <div class="col-md-2">
+                      <h4 class="canned_total">
+                        <span>年繳保費</span><br>
+                        1,234<span class="unit">元/年</span>
+                      </h4>
+                      <a href="##" class="btn btn-primary btn-block btn-count"><i class="fa fa-usd"></i>調整我的預算</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <ul class="pagination pagination-lg">
+              <li class="disabled"><a href="#">«</a></li>
+              <li class="active"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">»</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6">
+              <p>保單查詢功能需提供年齡與性別才能提供符合條件的保險資訊，保險規劃功能僅提供會員使用。<br>
+              無論您是否登入會員，在使用本網站時，您都受到EZprice比價網<a href="http://ezprice.com.tw/privacy_policy.php" target="_blank">會員及隱私權條款</a>保護。<br>
+              保單名稱或相關條件之正確資訊應以各家保險公司官網之公告或最新文宣為主，本網站並非保險仲介或交易平台，保險標的之詳情應請洽各保險公司之保險從業人員。<br>
+              </p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 footer-right">
+              <a href="##">聯絡我們</a>
+              <a href="##">意見回饋</a>
+              <a href="##">會員及隱私條款</a><br>
+              © 2015 EZprice Co., Ltd. All rights reserved.<br>
+              常年法律顧問: 明沂法律事務所
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="javascripts/bootstrap.js"></script>
+    <script src="javascripts/bootswatch.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        $( "i.love" ).click(function() {
+          $(this).toggleClass("on");
+        });
+      });
+    </script>
+  </body>
+</html>

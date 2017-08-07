@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>首頁</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="stylesheet" href="stylesheets/bootstrap.css">
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> 
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="index.html" class="navbar-brand">
+            <img src="images/logo.png" alt="logo">
+          </a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav navbar-right">
+            <!-- <li><a href="##" data-toggle="modal" data-target="#first_guide">第一次進來的引導</a></li>
+            <li><a href="lifeinsurance.html"><i class="fa fa-child fa-lg"></i>人身險</a></li>
+            <li><a href="##"><i class="fa fa-car"></i>車險</a></li> -->
+            <li><a href="##" data-toggle="modal" data-target="#login"><span class="glyphicon glyphicon-user"></span>我要登入/註冊</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              <img src="http://i.imgur.com/ckl0bKH.jpg" alt="頭像" class="img-circle img-size">
+              Jennifer Chen <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="mycare.html" target="_blank"><i class="fa fa-heartbeat fa-padding"></i>我的保險清單</a></li>
+                <li class="divider"></li>
+                <li><a href="member.html" target="_blank"><i class="fa fa-file-text-o fa-padding"></i>設定</a></li>
+                <li class="divider"></li>
+                <li><a href="#"><i class="fa fa-power-off fa-padding"></i>登出</a></li>
+              </ul>
+            </li>
+            <li><a href="##"><i class="fa fa-comments-o glyphicon-user"></i>意見回饋</a></li>
+            <!-- <li><a href="##" id="cd-tour-trigger"><i class="fa fa-lightbulb-o fa-lg glyphicon-user"></i>新手教學</a></li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <a class="btn-circle page-scroll">
+      保險比價如何用<br>
+      <i id="icon" class="fa fa-angle-double-down fa-lg animated"></i>
+    </a>
+    <div class="select-area scroll-section sec-resize">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-push-8 col-sm-4 col-md-push-8 col-md-4">
+            <div class="select-area-box">
+              <h3>我的保單<span>規劃試算</span></h3>
+              <ul>
+                <li class="clearfix">
+                  <span class="year">出生年<br><span>(民國年)</span></span>
+                  <input type="number" name="y" placeholder="例: 74" class="input-year input-danger" min="1866" max="2016">
+                  <span class="year-word">年</span>
+                  <span class="text-danger text-notice">*請輸入<br>出生年</span>
+                </li>
+                <li class="clearfix">
+                  <span class="gender">性別</span>
+                  <div class='switch'>
+                    <div class='quality'>
+                      <input checked id='q1' name='q' type='radio' value='q1'>
+                      <label for='q1'>男</label>
+                    </div>
+                    <div class='quality'>
+                      <input id='q2' name='q' type='radio' value='q2'>
+                      <label for='q2'>女</label>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <a href="insurance_list_v3.html" class="btn btn-danger btn-text-14 btn-find-plan">找保單試算</a>
+              <br>
+              <span class="notice">需要年齡與性別才能配對保單資料</span>
+            </div>
+          </div>
+          <div class="img-display col-sm-8 col-sm-pull-4 col-md-8 col-md-pull-4">
+            <img src="images/index-img.png" alt="left-img" class="left-img img-responsive">
+          </div>
+          <img src="http://i.imgur.com/X5hUKRM.png" alt="rwd-img" class="rwd-img img-responsive">
+        </div>
+      </div>
+    </div>
+    <!-- Step1-->
+    <div class="step1-section scroll-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h3 class="step1">Step1. 輸入出生年次及性別，開始保單試算！</h3>
+            <img class="img-responsive img-step" src="http://i.imgur.com/0O5wdnR.jpg" alt="step1">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Step2-->
+    <div class="step2-section scroll-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h3 class="step1">Step2. 搭配想要的險種保單組成保險計畫。</h3>
+            <span class="text-danger">註：一張成立的保單，是由「主約(必要)」＋「附約」組成，各家保險公司對於自家的主附約保單都有對應關係，故當加入某張保單時，系統即過濾出可搭配的主附約。</span>
+            <img class="img-responsive img-step" src="http://i.imgur.com/j3P1F6n.jpg" alt="step1">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Step3-->
+    <div class="step1-section scroll-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h3 class="step1">Step3. 選擇保險計畫</h3>
+            <img class="img-responsive img-step" src="http://i.imgur.com/pPvG2Fk.jpg" alt="step1">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Step4-->
+    <div class="step4-section scroll-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h3 class="step1">Step4. 調整保單費率級距來試算比較您的保險計畫！</h3>
+            <img class="img-responsive img-step" src="http://i.imgur.com/vvaJb7r.jpg" alt="step1">
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6">
+              <p>保單查詢功能需提供年齡與性別才能提供符合條件的保險資訊，保險規劃功能僅提供會員使用。<br>
+              無論您是否登入會員，在使用本網站時，您都受到EZprice比價網<a href="http://ezprice.com.tw/privacy_policy.php" target="_blank">會員及隱私權條款</a>保護。<br>
+              保單名稱或相關條件之正確資訊應以各家保險公司官網之公告或最新文宣為主，本網站並非保險仲介或交易平台，保險標的之詳情應請洽各保險公司之保險從業人員。<br>
+              </p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 footer-right">
+              <a href="##">聯絡我們</a>
+              <a href="##">意見回饋</a>
+              <a href="##">會員及隱私條款</a><br>
+              © 2015 EZprice Co., Ltd. All rights reserved.<br>
+              常年法律顧問: 明沂法律事務所
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- login的彈窗 -->
+    <div class="modal" id="login">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header modal-header-line">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title">會員登入</h4>
+          </div>
+          <div class="modal-body modal-body-padding">
+            <a href="#" class="btn btn-facebook btn-block">Facebook 登入</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- first_guide的彈窗 -->
+    <!-- <div class="modal" id="first_guide">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header modal-header-line">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title text-center">要理解保險，很複雜嗎!?<br>EZprice用最簡單的三個概念，教你自己的保單自己規劃！</h4>
+          </div>
+          <div class="modal-body modal-body-padding text-center">
+            <div class="row step-box">
+              <div class="col-md-3">
+                <img src="http://i.imgur.com/AUqwYVE.png" alt="step1">
+                <h4>找到你的保險需求</h4>
+              </div>
+              <div class="col-md-1 arrow">
+                <i class="fa fa-arrow-right fa-3x"></i>
+                <i class="fa fa-arrow-down fa-3x"></i>
+              </div>
+              <div class="col-md-3">
+                <img src="http://i.imgur.com/1tQJTRx.png" alt="step1">
+                <h4>規劃你的保險計劃</h4>
+              </div>
+              <div class="col-md-1 arrow">
+                <i class="fa fa-arrow-right fa-3x"></i>
+                <i class="fa fa-arrow-down fa-3x"></i>
+              </div>
+              <div class="col-md-3">
+                <img src="http://i.imgur.com/07VE20T.png" alt="step1">
+                <h4>試算你的保費</h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-offset-3 col-md-6">
+                <a class="btn btn-primary btn-lg btn-block" href="##" id="cd-tour-trigger" data-dismiss="modal">知道了，開始我的保險計劃！</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="javascripts/bootstrap.js"></script>
+    <script src="javascripts/scrolling-nav.js"></script>
+  </body>
+</html>

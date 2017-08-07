@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>險種分類列表頁v3</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="stylesheet" href="stylesheets/bootstrap.css">
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+  <body>
+    <!-- loading mask -->
+    <!-- <div class="loading">
+      <div>
+        <div class="c1"></div>
+        <div class="c2"></div>
+        <div class="c3"></div>
+        <div class="c4"></div>
+      </div>
+      <span>可搭配的保單過濾中...</span>
+    </div> -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="index.html" class="navbar-brand">
+            <img src="images/logo.png" alt="">
+          </a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="##" data-toggle="modal" data-target="#login"><span class="glyphicon glyphicon-user"></span>我要登入/註冊</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              <img src="http://i.imgur.com/ckl0bKH.jpg" alt="頭像" class="img-circle img-size">
+              Jennifer Chen <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="mycare.html" target="_blank"><i class="fa fa-heartbeat fa-padding"></i>我的保險清單</a></li>
+                <li class="divider"></li>
+                <li><a href="member.html" target="_blank"><i class="fa fa-file-text-o fa-padding"></i>設定</a></li>
+                <li class="divider"></li>
+                <li><a href="#"><i class="fa fa-power-off fa-padding"></i>登出</a></li>
+              </ul>
+            </li>
+            <li><a href="##"><i class="fa fa-comments-o glyphicon-user"></i>意見回饋</a></li>
+            <!-- <li><a href="##" id="cd-tour-trigger"><i class="fa fa-lightbulb-o fa-lg glyphicon-user"></i>新手教學</a></li> -->
+            <!-- <li><a href="##"><i class="fa fa-child fa-lg"></i>人身險</a></li> -->
+            <!-- <li><a href="##"><i class="fa fa-car"></i>車險</a></li> -->
+          </ul>
+          <!-- <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="輸入金額或關鍵字">
+              <button type="submit" class="btn btn-primary">
+                <span class="glyphicon glyphicon-search"></span>
+              </button>
+            </div>
+          </form> -->
+        </div>
+      </div>
+    </div>
+    <div class="content_area">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <ol class="breadcrumb">
+              <li><a href="#"><span>首頁</span></a></li>
+              <li class="active"><a href="#"><span>0歲 新生兒 的保險列表</span></a></li>
+            </ol>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 clearfix">
+            <h1 class="list_title">新生兒保險比價試算<a href="##">新生兒罐頭保單</a></h1>
+            <a href="##" class="modify-link" data-toggle="modal" data-target="#edit-age"><i class="fa fa-pencil"></i>修改</a>
+            <div class="age-modify">
+              <p>出生年/民國78年(26歲)</p>
+              <p>性別/女</p>
+            </div>
+          </div>
+        </div>
+        <div class="insurance-top-list set-opacity clearfix" style="display:none;">
+          <div class="row">
+            <div class="col-sm-10 col-md-10">
+              <ul>
+                <li class="clearfix">
+                  <span class="kind">需求項目</span>
+                  <span>共0項</span>
+                </li>
+                <li class="clearfix">
+                  尚未加入需求
+                </li>
+              </ul>
+              <span class="arrow"><i class="fa fa-angle-right fa-4x"></i></span>
+              <div class="total">
+                <span class="total_word">年繳保費合計</span><br>
+                <span class="total_price none">－－<span class="unit">元/年</span></span>
+              </div>
+            </div>
+            <div class="col-sm-2 col-md-2 text-center">
+              <button class="btn-block love_btn"><i class="love"></i>收藏計畫</button>
+            </div>
+          </div>
+        </div>
+        <div class="insurance-top-list clearfix">
+          <div class="row">
+            <div class="col-sm-10 col-md-10">
+              <ul class="in3products">
+                <li class="clearfix">
+                  <span class="kind">需求項目</span>
+                  <span>共4項</span>
+                  <a href="##" class="more"><i class="fa fa-caret-down fa-lg"></i>顯示全部</a>
+                </li>
+                <li class="clearfix">
+                  <span class="kind">壽險</span>
+                  <span class="name"><span class="main-tag">主</span>新光人壽-幸福人生終身壽險<span class="time_pay">20期</span></span>
+                  <span class="im_price">身故保險金 50萬</span>
+                  <span class="sub_total">小計 2,000元/年</span>
+                </li>
+                <li class="clearfix">
+                  <span class="kind">醫療險</span>
+                  <span class="name"><span class="attach-tag">附</span>新光人壽-安心住院保險附約<span class="time_pay">10期</span></span>
+                  <span class="im_price">住院日額 3000元/日</span>
+                  <span class="sub_total">小計 700元/年</span>
+                </li>
+                <li class="current clearfix">
+                  <span class="kind">癌症險</span>
+                  <span class="name"><span class="attach-tag">附</span>新光人壽-讓你久久終身防癌健康保險<span class="time_pay">15期</span></span>
+                  <span class="im_price">初次罹癌金 300萬</span>
+                  <span class="sub_total">小計 356元/年</span>
+                </li>
+              </ul>
+              <ul class="over3products">
+                <li class="clearfix">
+                  <span class="kind">需求項目</span>
+                  <span>共4項</span>
+                  <a href="##" class="more more-close"><i class="fa fa-caret-up fa-lg"></i>關閉</a>
+                </li>
+                <li class="clearfix">
+                  <span class="kind">壽險</span>
+                  <span class="name"><span class="main-tag">主</span>新光人壽-幸福人生終身壽險<span class="time_pay">20期</span></span>
+                  <span class="im_price">身故保險金 50萬</span>
+                  <span class="sub_total">小計 2,000元/年</span>
+                </li>
+                <li class="clearfix">
+                  <span class="kind">醫療險</span>
+                  <span class="name"><span class="attach-tag">附</span>新光人壽-安心住院保險附約<span class="time_pay">10期</span></span>
+                  <span class="im_price">住院日額 3000元/日</span>
+                  <span class="sub_total">小計 700元/年</span>
+                </li>
+                <li class="clearfix">
+                  <span class="kind">癌症險</span>
+                  <span class="name"><span class="attach-tag">附</span>新光人壽-讓你久久終身防癌健康保險<span class="time_pay">15期</span></span>
+                  <span class="im_price">初次罹癌金 300萬</span>
+                  <span class="sub_total">小計 356元/年</span>
+                </li>
+                <li class="clearfix">
+                  <span class="kind">重大疾病險</span>
+                  <span class="name"><span class="attach-tag">附</span>新光人壽-讓你久久終身防癌健康保險<span class="time_pay">15期</span></span>
+                  <span class="im_price">初次罹癌金 300萬</span>
+                  <span class="sub_total">小計 356元/年</span>
+                </li>
+              </ul>
+              <span class="arrow"><i class="fa fa-angle-right fa-4x"></i></span>
+              <div class="total">
+                <span class="total_word">年繳保費合計</span><br>
+                <span class="total_price">12,345 <span class="unit">元/年</span></span>
+              </div>
+            </div>
+            <div class="col-sm-2 col-md-2 text-center">
+              <!-- <button class="btn-block love_btn"><i class="love"></i>收藏計畫</button> -->
+              <button class="btn-block love_btn on"><i class="love on"></i>收藏計畫</button>
+              <a href="##" class="clear_all">清除重新試算</a>
+            </div>
+          </div>
+        </div>   
+      </div>
+      <div class="bg-gray">
+        <div class="container">
+          <div class="kind-filter">
+            <div class="row">
+              <div class="col-sm-12 col-md-12">
+                <ul class="nav nav-pills nav-kind">
+                  <li class="active">
+                    <a href="##">
+                      壽險
+                      <span class="badge">1940</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="##">
+                      重大疾病險
+                      <span class="badge">320</span>
+                    </a> 
+                  </li>
+                  <li>
+                    <a href="##">
+                      醫療險
+                      <span class="badge">1258</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="##">
+                      癌症險
+                      <span class="badge">300</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="##">
+                      意外險
+                      <span class="badge">898</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="##">
+                      殘廢險
+                      <span class="badge">534</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="##">
+                      看護險
+                      <span class="badge">48</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="##">
+                      特定傷病險
+                      <span class="badge">162</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-12">
+              <div class="insurance-list table-responsive">
+                <div class="condition">
+                  <form class="form-horizontal">
+                    <fieldset>
+                      <div class="price_range_area">
+                        <div class="price_range">
+                          <span class="cond_text">身故保險金</span>
+                          <ul class="advance_choice">
+                            <li><a href="##" class="current">全部</a></li>
+                            <li><a href="##">100萬以下</a></li>
+                            <li><a href="##">100萬～500萬</a></li>
+                            <li><a href="##">500萬～1000萬</a></li>
+                            <li><a href="##">1000萬以上</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="cond_time_area">
+                        <span class="cond_text">保險期間</span>
+                        <ul class="advance_choice">
+                          <li><a href="##" class="current">全部</a></li>
+                          <li><a href="##">定期</a></li>
+                          <li><a href="##">終身</a></li>
+                        </ul>
+                      </div>
+                    </fieldset>
+                  </form>
+                </div>
+                <ol class="table">
+                  <li class="table-head">
+                    <span class="head-company-name">保險公司</span>
+                    <span class="head-product-name">保險名稱</span>
+                    <span>主附約</span>
+                    <span>年繳額<a href="##" class="sort"><i class="fa fa-sort"></i></a></span>  
+                    <span class="im_kind">身故保險金<a href="##" class="sort"><i class="fa fa-sort"></i></a></span>
+                    <span>祝壽保險金</span>
+                    <span>非全殘理賠</span>
+                    <span class="head-chose-plan">選擇</span>
+                  </li>
+                  <li class="pr-box">
+                    <span><a href="##" class="company-name">三商美邦人壽</a></span>
+                    <span>
+                      <div class="product-name">
+                        <span class="label label-warning"><i class="fa fa-thumbs-up"></i>推薦</span>
+                        <a href="##" class="company-name">不分紅定期壽險</a>
+                        <span class="time_pay">10期</span>
+                      </div>
+                    </span>
+                    <span>主約</span>
+                    <span>800<br>元</span>
+                    <span>1,000,000<br>元</span>
+                    <span>無</span>
+                    <span>無</span>
+                    <span class="chose-plan"><a href="##" class="add-plan"><i class="fa fa-plus"></i></a></span>
+                  </li>
+                  <li>
+                    <span><a href="##" class="company-name added">國泰人壽</a></span>
+                    <span>
+                      <div class="product-name">
+                        <a href="##" class="company-name added">新松柏長期看護終身壽險</a>
+                        <span class="time_pay">15期</span>
+                      </div>
+                    </span>
+                    <span>主約</span>
+                    <span>3240<br>元</span>
+                    <span>100,000<br>元</span>
+                    <span>無</span>
+                    <span class="correct">有</span>
+                    <span class="chose-plan"><a href="##" class="add-plan"><i class="fa fa-plus"></i></a></span>
+                  </li>
+                  <li>
+                    <span><a href="##" class="company-name">國泰人壽</a></span>
+                    <span>
+                      <div class="product-name">
+                        <a href="##" class="company-name">新松柏長期看護終身壽險</a>
+                        <span class="time_pay">15期</span>
+                      </div>
+                    </span>
+                    <span>主約</span>
+                    <span>3240<br>元</span>
+                    <span>100,000<br>元</span>
+                    <span>無</span>
+                    <span class="correct">有</span>
+                    <span class="chose-plan"><a href="##" class="add-plan"><i class="fa fa-plus"></i></a></span>
+                  </li>
+                  <li>
+                    <span><a href="##" class="company-name">國泰人壽</a></span>
+                    <span>
+                      <div class="product-name">
+                        <a href="##" class="company-name">新松柏長期看護終身壽險</a>
+                        <span class="time_pay">15期</span>
+                      </div>
+                    </span>
+                    <span>主約</span>
+                    <span>3240<br>元</span>
+                    <span>100,000<br>元</span>
+                    <span>無</span>
+                    <span class="correct">有</span>
+                    <span class="chose-plan"><a href="##" class="add-plan"><i class="fa fa-plus"></i></a></span>
+                  </li>
+                  <li>
+                    <span><a href="##" class="company-name">國泰人壽</a></span>
+                    <span>
+                      <div class="product-name">
+                        <a href="##" class="company-name">新松柏長期看護終身壽險</a>
+                        <span class="time_pay">15期</span>
+                      </div>
+                    </span>
+                    <span>主約</span>
+                    <span>3240<br>元</span>
+                    <span>100,000<br>元</span>
+                    <span>無</span>
+                    <span class="correct">有</span>
+                    <span class="chose-plan"><a href="##" class="add-plan"><i class="fa fa-plus"></i></a></span>
+                  </li>
+                  <li>
+                    <span><a href="##" class="company-name">國泰人壽</a></span>
+                    <span>
+                      <div class="product-name">
+                        <a href="##" class="company-name">新松柏長期看護終身壽險</a>
+                        <span class="time_pay">15期</span>
+                      </div>
+                    </span>
+                    <span>主約</span>
+                    <span>3240<br>元</span>
+                    <span>100,000<br>元</span>
+                    <span>無</span>
+                    <span class="correct">有</span>
+                    <span class="chose-plan"><a href="##" class="add-plan"><i class="fa fa-plus"></i></a></span>
+                  </li>
+                  <li>
+                    <span><a href="##" class="company-name">國泰人壽</a></span>
+                    <span>
+                      <div class="product-name">
+                        <a href="##" class="company-name">新松柏長期看護終身壽險</a>
+                        <span class="time_pay">15期</span>
+                      </div>
+                    </span>
+                    <span>主約</span>
+                    <span>3240<br>元</span>
+                    <span>100,000<br>元</span>
+                    <span>無</span>
+                    <span class="correct">有</span>
+                    <span class="chose-plan"><a href="##" class="add-plan"><i class="fa fa-plus"></i></a></span>
+                  </li>
+                  <li>
+                    <span><a href="##" class="company-name">國泰人壽</a></span>
+                    <span>
+                      <div class="product-name">
+                        <a href="##" class="company-name">新松柏長期看護終身壽險</a>
+                        <span class="time_pay">15期</span>
+                      </div>
+                    </span>
+                    <span>主約</span>
+                    <span>3240<br>元</span>
+                    <span>100,000<br>元</span>
+                    <span>無</span>
+                    <span class="correct">有</span>
+                    <span class="chose-plan"><a href="##" class="add-plan"><i class="fa fa-plus"></i></a></span>
+                  </li>
+                  <li>
+                    <span><a href="##" class="company-name">國泰人壽</a></span>
+                    <span>
+                      <div class="product-name">
+                        <a href="##" class="company-name">新松柏長期看護終身壽險</a>
+                        <span class="time_pay">15期</span>
+                      </div>
+                    </span>
+                    <span>主約</span>
+                    <span>3240<br>元</span>
+                    <span>100,000<br>元</span>
+                    <span>無</span>
+                    <span class="correct">有</span>
+                    <span class="chose-plan"><a href="##" class="add-plan"><i class="fa fa-plus"></i></a></span>
+                  </li>
+                  <li>
+                    <span><a href="##" class="company-name">國泰人壽</a></span>
+                    <span>
+                      <div class="product-name">
+                        <a href="##" class="company-name">新松柏長期看護終身壽險</a>
+                        <span class="time_pay">15期</span>
+                      </div>
+                    </span>
+                    <span>主約</span>
+                    <span>3240<br>元</span>
+                    <span>100,000<br>元</span>
+                    <span>無</span>
+                    <span class="correct">有</span>
+                    <span class="chose-plan"><a href="##" class="add-plan"><i class="fa fa-plus"></i></a></span>
+                  </li>
+                  <li>
+                    <span><a href="##" class="company-name">國泰人壽</a></span>
+                    <span>
+                      <div class="product-name">
+                        <a href="##" class="company-name">新松柏長期看護終身壽險</a>
+                        <span class="time_pay">15期</span>
+                      </div>
+                    </span>
+                    <span>主約</span>
+                    <span>3240<br>元</span>
+                    <span>100,000<br>元</span>
+                    <span>無</span>
+                    <span class="correct">有</span>
+                    <span class="chose-plan"><a href="##" class="add-plan"><i class="fa fa-plus"></i></a></span>
+                  </li>
+                  <li>
+                    <span><a href="##" class="company-name">國泰人壽</a></span>
+                    <span>
+                      <div class="product-name">
+                        <a href="##" class="company-name">新松柏長期看護終身壽險</a>
+                        <span class="time_pay">15期</span>
+                      </div>
+                    </span>
+                    <span>主約</span>
+                    <span>3240<br>元</span>
+                    <span>100,000<br>元</span>
+                    <span>無</span>
+                    <span class="correct">有</span>
+                    <span class="chose-plan"><a href="##" class="add-plan"><i class="fa fa-plus"></i></a></span>
+                  </li>
+                  <li>
+                    <span><a href="##" class="company-name">國泰人壽</a></span>
+                    <span>
+                      <div class="product-name">
+                        <a href="##" class="company-name">新松柏長期看護終身壽險</a>
+                        <span class="time_pay">15期</span>
+                      </div>
+                    </span>
+                    <span>主約</span>
+                    <span>3240<br>元</span>
+                    <span>100,000<br>元</span>
+                    <span>無</span>
+                    <span class="correct">有</span>
+                    <span class="chose-plan"><a href="##" class="add-plan"><i class="fa fa-plus"></i></a></span>
+                  </li>
+                  <li>
+                    <span><a href="##" class="company-name">國泰人壽</a></span>
+                    <span>
+                      <div class="product-name">
+                        <a href="##" class="company-name">新松柏長期看護終身壽險</a>
+                        <span class="time_pay">15期</span>
+                      </div>
+                    </span>
+                    <span>主約</span>
+                    <span>3240<br>元</span>
+                    <span>100,000<br>元</span>
+                    <span>無</span>
+                    <span class="correct">有</span>
+                    <span class="chose-plan"><a href="##" class="add-plan"><i class="fa fa-plus"></i></a></span>
+                  </li> 
+                </ol>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <ul class="pagination pagination-lg">
+                <li class="disabled"><a href="#">«</a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">»</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>  
+      </div>
+    </div>
+    <footer>
+      <div class="copyright copyright_w">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6">
+              <p>保單查詢功能需提供年齡與性別才能提供符合條件的保險資訊，保險規劃功能僅提供會員使用。<br>
+              無論您是否登入會員，在使用本網站時，您都受到EZprice比價網<a href="http://ezprice.com.tw/privacy_policy.php" target="_blank">會員及隱私權條款</a>保護。<br>
+              保單名稱或相關條件之正確資訊應以各家保險公司官網之公告或最新文宣為主，本網站並非保險仲介或交易平台，保險標的之詳情應請洽各保險公司之保險從業人員。<br>
+              </p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 footer-right">
+              <a href="##">聯絡我們</a>
+              <a href="##">意見回饋</a>
+              <a href="##">會員及隱私條款</a><br>
+              © 2015 EZprice Co., Ltd. All rights reserved.<br>
+              常年法律顧問: 明沂法律事務所
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- right-panel -->
+    <div class="cd-main-content">
+      <a href="##" class="right-panel cd-btn">
+        <span>我的計畫<br>(N)</span>
+      </a>
+    </div>
+    <div class="cd-panel from-right">
+      <div class="cd-panel-header">
+        <h4>你收藏的保險計劃</h4>
+        <a href="#0" class="cd-panel-close">Close</a>
+        <a href="compare.html" class="btn btn-default btn-text-14 btn-compare"><i class="fa fa-compress fa-lg"></i>下一步：保險試算比較 →</a>
+        <!-- 有選取一份保險計劃時，btn轉換 -->
+        <!-- <a href="#" class="btn btn-danger btn-text-14 btn-compare"><i class="fa fa-compress fa-lg"></i>下一步：保險試算比較 →</a> -->
+      </div>
+      <div class="cd-panel-container">
+        <div class="cd-panel-content">
+          <div class="row">
+            <div class="col-sm-12 col-md-12">
+              <div class="collect-plan pr-plan">
+                <div class="row">
+                  <div class="col-sm-12 col-md-12">
+                    <div class="plan-line-1 clearfix">
+                      <div class="ez_tag">
+                        <span class="tag_name">推薦</span>
+                      </div>
+                      <div class="age-area">
+                        <span>77年11月(27歲)女性</span>
+                      </div>
+                      <div class="compare-check c-checkbox pull-right">
+                        <span>比較</span>
+                        <label>
+                          <input type="checkbox" />
+                          <span class="fa fa-check red-checkbox"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-12">
+                    <div class="plan-line-2 clearfix">
+                      <div class="company-name">
+                        新光人壽
+                      </div>
+                      <div class="total">
+                        <span class="total_word">年繳保費合計</span>
+                        <span class="total_price">12,345 <span class="unit">元/年</span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-12">
+                    <div class="plan-line-3 clearfix">
+                      <ul>
+                        <li class="clearfix">
+                          <span class="kind">壽險</span>
+                          <span class="name"><span class="main-tag">主</span>新光人壽-幸福人生終身壽險<span class="time_pay">20期</span></span>
+                          <span class="im_price">身故保險金 50萬</span>
+                          <span class="sub_total">小計 2,000元/年</span>
+                        </li>
+                        <li class="clearfix">
+                          <span class="kind">醫療險</span>
+                          <span class="name"><span class="attach-tag">附</span>新光人壽-安心住院保險附約<span class="time_pay">10期</span></span>
+                          <span class="im_price">住院日額 3000元/日</span>
+                          <span class="sub_total">小計 700元/年</span>
+                        </li>
+                        <li class="clearfix">
+                          <span class="kind">癌症險</span>
+                          <span class="name"><span class="attach-tag">附</span>新光人壽-讓你久久終身防癌健康保險<span class="time_pay">15期</span></span>
+                          <span class="im_price">初次罹癌金 300萬</span>
+                          <span class="sub_total">小計 356元/年</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+              <div class="collect-plan">
+                <div class="row">
+                  <div class="col-sm-12 col-md-12">
+                    <div class="plan-line-1 clearfix">
+                      <div class="nm_tag">
+                        <span class="tag_name">1</span>
+                      </div>
+                      <div class="age-area">
+                        <span>77年11月(27歲)女性</span>
+                        <span class="collect-day">2015.11.20收藏</span>
+                      </div>
+                      <div class="compare-check c-checkbox pull-right">
+                        <span>比較</span>
+                        <label>
+                          <input type="checkbox" />
+                          <span class="fa fa-check red-checkbox"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-12">
+                    <div class="plan-line-2 clearfix">
+                      <div class="company-name">
+                        新光人壽
+                      </div>
+                      <div class="total">
+                        <span class="total_word">年繳保費合計</span>
+                        <span class="total_price">12,345 <span class="unit">元/年</span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-12">
+                    <div class="plan-line-3 clearfix">
+                      <ul>
+                        <li class="clearfix">
+                          <span class="kind">壽險</span>
+                          <span class="name"><span class="main-tag">主</span>新光人壽-幸福人生終身壽險<span class="time_pay">20期</span></span>
+                          <span class="im_price">身故保險金 50萬</span>
+                          <span class="sub_total">小計 2,000元/年</span>
+                        </li>
+                        <li class="clearfix">
+                          <span class="kind">醫療險</span>
+                          <span class="name"><span class="attach-tag">附</span>新光人壽-安心住院保險附約<span class="time_pay">10期</span></span>
+                          <span class="im_price">住院日額 3000元/日</span>
+                          <span class="sub_total">小計 700元/年</span>
+                        </li>
+                        <li class="clearfix">
+                          <span class="kind">癌症險</span>
+                          <span class="name"><span class="attach-tag">附</span>新光人壽-讓你久久終身防癌健康保險<span class="time_pay">15期</span></span>
+                          <span class="im_price">初次罹癌金 300萬</span>
+                          <span class="sub_total">小計 356元/年</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+              <div class="collect-plan">
+                <div class="row">
+                  <div class="col-sm-12 col-md-12">
+                    <div class="plan-line-1 clearfix">
+                      <div class="nm_tag">
+                        <span class="tag_name">2</span>
+                      </div>
+                      <div class="age-area">
+                        <span>77年11月(27歲)女性</span>
+                        <span class="collect-day">2015.11.20收藏</span>
+                      </div>
+                      <div class="compare-check c-checkbox pull-right">
+                        <span>比較</span>
+                        <label>
+                          <input type="checkbox" />
+                          <span class="fa fa-check red-checkbox"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-12">
+                    <div class="plan-line-2 clearfix">
+                      <div class="company-name">
+                        新光人壽
+                      </div>
+                      <div class="total">
+                        <span class="total_word">年繳保費合計</span>
+                        <span class="total_price">12,345 <span class="unit">元/年</span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-12">
+                    <div class="plan-line-3 clearfix">
+                      <ul>
+                        <li class="clearfix">
+                          <span class="kind">壽險</span>
+                          <span class="name"><span class="main-tag">主</span>新光人壽-幸福人生終身壽險<span class="time_pay">20期</span></span>
+                          <span class="im_price">身故保險金 50萬</span>
+                          <span class="sub_total">小計 2,000元/年</span>
+                        </li>
+                        <li class="clearfix">
+                          <span class="kind">醫療險</span>
+                          <span class="name"><span class="attach-tag">附</span>新光人壽-安心住院保險附約<span class="time_pay">10期</span></span>
+                          <span class="im_price">住院日額 3000元/日</span>
+                          <span class="sub_total">小計 700元/年</span>
+                        </li>
+                        <li class="clearfix">
+                          <span class="kind">癌症險</span>
+                          <span class="name"><span class="attach-tag">附</span>新光人壽-讓你久久終身防癌健康保險<span class="time_pay">15期</span></span>
+                          <span class="im_price">初次罹癌金 300萬</span>
+                          <span class="sub_total">小計 356元/年</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+              <div class="collect-plan">
+                <div class="row">
+                  <div class="col-sm-12 col-md-12">
+                    <div class="plan-line-1 clearfix">
+                      <div class="nm_tag">
+                        <span class="tag_name">3</span>
+                      </div>
+                      <div class="age-area">
+                        <span>77年11月(27歲)女性</span>
+                        <span class="collect-day">2015.11.20收藏</span>
+                      </div>
+                      <div class="compare-check c-checkbox pull-right">
+                        <span>比較</span>
+                        <label>
+                          <input type="checkbox" />
+                          <span class="fa fa-check red-checkbox"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-12">
+                    <div class="plan-line-2 clearfix">
+                      <div class="company-name">
+                        新光人壽
+                      </div>
+                      <div class="total">
+                        <span class="total_word">年繳保費合計</span>
+                        <span class="total_price">12,345 <span class="unit">元/年</span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-12">
+                    <div class="plan-line-3 clearfix">
+                      <ul>
+                        <li class="clearfix">
+                          <span class="kind">壽險</span>
+                          <span class="name"><span class="main-tag">主</span>新光人壽-幸福人生終身壽險<span class="time_pay">20期</span></span>
+                          <span class="im_price">身故保險金 50萬</span>
+                          <span class="sub_total">小計 2,000元/年</span>
+                        </li>
+                        <li class="clearfix">
+                          <span class="kind">醫療險</span>
+                          <span class="name"><span class="attach-tag">附</span>新光人壽-安心住院保險附約<span class="time_pay">10期</span></span>
+                          <span class="im_price">住院日額 3000元/日</span>
+                          <span class="sub_total">小計 700元/年</span>
+                        </li>
+                        <li class="clearfix">
+                          <span class="kind">癌症險</span>
+                          <span class="name"><span class="attach-tag">附</span>新光人壽-讓你久久終身防癌健康保險<span class="time_pay">15期</span></span>
+                          <span class="im_price">初次罹癌金 300萬</span>
+                          <span class="sub_total">小計 356元/年</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+              <div class="collect-plan">
+                <div class="row">
+                  <div class="col-sm-12 col-md-12">
+                    <div class="plan-line-1 clearfix">
+                      <div class="nm_tag">
+                        <span class="tag_name">4</span>
+                      </div>
+                      <div class="age-area">
+                        <span>77年11月(27歲)女性</span>
+                        <span class="collect-day">2015.11.20收藏</span>
+                      </div>
+                      <div class="compare-check c-checkbox pull-right">
+                        <span>比較</span>
+                        <label>
+                          <input type="checkbox" />
+                          <span class="fa fa-check red-checkbox"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-12">
+                    <div class="plan-line-2 clearfix">
+                      <div class="company-name">
+                        新光人壽
+                      </div>
+                      <div class="total">
+                        <span class="total_word">年繳保費合計</span>
+                        <span class="total_price">12,345 <span class="unit">元/年</span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-12">
+                    <div class="plan-line-3 clearfix">
+                      <ul>
+                        <li class="clearfix">
+                          <span class="kind">壽險</span>
+                          <span class="name"><span class="main-tag">主</span>新光人壽-幸福人生終身壽險<span class="time_pay">20期</span></span>
+                          <span class="im_price">身故保險金 50萬</span>
+                          <span class="sub_total">小計 2,000元/年</span>
+                        </li>
+                        <li class="clearfix">
+                          <span class="kind">醫療險</span>
+                          <span class="name"><span class="attach-tag">附</span>新光人壽-安心住院保險附約<span class="time_pay">10期</span></span>
+                          <span class="im_price">住院日額 3000元/日</span>
+                          <span class="sub_total">小計 700元/年</span>
+                        </li>
+                        <li class="clearfix">
+                          <span class="kind">癌症險</span>
+                          <span class="name"><span class="attach-tag">附</span>新光人壽-讓你久久終身防癌健康保險<span class="time_pay">15期</span></span>
+                          <span class="im_price">初次罹癌金 300萬</span>
+                          <span class="sub_total">小計 356元/年</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- cd-panel-content -->
+      </div> <!-- cd-panel-container -->
+    </div> <!-- cd-panel -->
+
+    <!-- edit-age -->
+    <div class="modal fade" id="edit-age" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header edit-age-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">輸入試算的出生年月日及性別</h4>
+          </div>
+          <div class="modal-body edit-age-body">
+            <div class="row">
+              <div class="col-sm-12 col-md-12 clearfix">
+                <div class="age">
+                  <span>出生年</span>
+                  <select class="form-control year-select" id="select">
+                    <option>民國年</option>
+                    <option>77年(27歲)</option>
+                    <option>78年(26歲)</option>
+                    <option>79年(25歲)</option>
+                    <option>80年(24歲)</option>
+                    <option>81年(23歲)</option>
+                    <option>82年(22歲)</option>
+                    <option>83年(21歲)</option>
+                    <option>84年(20歲)</option>
+                  </select>
+                  <select class="form-control month-select" id="select">
+                    <option>月份</option>
+                    <option>1月</option>
+                    <option>2月</option>
+                    <option>3月</option>
+                    <option>4月</option>
+                  </select>
+                  <span>月</span>
+                </div>
+                <div class="modal-gender">
+                  <span>性別</span>
+                  <input type="radio" class="radio" name="sex" value="0" id="men">
+                  <label for="men"><span>男性</span></label>
+                  <input type="radio" class="radio" name="sex" value="1" id="women">
+                  <label for="women"><span>女性</span></label>
+                </div>
+              </div>
+            </div>         
+          </div>
+          <div class="modal-footer edit-age-footer">
+            <button type="button" class="btn btn-primary btn-edit-age">確定</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="javascripts/bootstrap.js"></script>
+    <script src="javascripts/bootswatch.js"></script>
+    <script src="javascripts/product_tour.js"></script>
+    <script>
+      $(function(){
+        //placeholder events
+        $('.text').click(function(){
+          $(this).parent().children('.input').focus();
+        });
+        
+        $('.input').focus(function() {
+            $(this).parent().children('.text').addClass('input-active');
+          });
+        
+        $('.input').blur(function() {
+          if ($(this).val().length == 0) {
+            $(this).parent().children('.text').removeClass('input-active');
+          }
+        });
+        //open the lateral panel
+        $('.cd-btn').on('click', function(event){
+          event.preventDefault();
+          $('.cd-panel').addClass('is-visible');
+        });
+        //clode the lateral panel
+        $('.cd-panel').on('click', function(event){
+          if( $(event.target).is('.cd-panel') || $(event.target).is('.cd-panel-close') ) { 
+            $('.cd-panel').removeClass('is-visible');
+            event.preventDefault();
+          }
+        });
+      });
+    </script>
+    <script type="text/javascript">     
+      $(function(){
+        $('.more').click(function() {
+          $('ul.over3products').css({
+            display: 'block',
+          });
+        });
+        $('.more-close').click(function() {
+          $('ul.over3products').css({
+            display: 'none',
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
