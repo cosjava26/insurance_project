@@ -1,6 +1,11 @@
 # insurance_project
 5bobi保險比價 網頁設計
 網址：http://cosjava26.github.io/insurance_project/index.html
+
+<p align="center">
+  <img src="http://i.imgur.com/YYyJY9m.png">
+</p>
+
 ## 改版過程：
 <p align="center">
   <img src="http://i.imgur.com/KajoSVQ.png">
